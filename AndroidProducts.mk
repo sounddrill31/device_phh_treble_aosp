@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_phhgsi.mk \
+    $(LOCAL_DIR)/aosp_arm64_bgN.mk \

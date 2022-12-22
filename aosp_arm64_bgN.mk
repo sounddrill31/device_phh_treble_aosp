@@ -14,7 +14,7 @@ PRODUCT_MODEL := Phh-Treble GSI
 
 # Disable "emulator" characteristics
 PRODUCT_CHARACTERISTICS := device
-PRODUCT_PACKAGES :=
+#PRODUCT_PACKAGES :=
 
 # Project-Elixir
 IS_PHONE := true

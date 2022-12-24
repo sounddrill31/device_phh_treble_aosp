@@ -8,11 +8,20 @@ PRODUCT_COPY_FILES := \
 	frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
 	frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
 
+# Bluetooth Audio (System-side HAL, sysbta)
+PRODUCT_PACKAGES += \
+    audio.sysbta.default \
+    android.hardware.bluetooth.audio-service-system
+
+PRODUCT_COPY_FILES += \
+    device/phh/treble/bluetooth/audio/config/sysbta_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration.xml \
+    device/phh/treble/bluetooth/audio/config/sysbta_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration_7_0.xml
+
 #Use a more decent APN config
 PRODUCT_COPY_FILES += \
 	device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/phh/treble/sepolicy
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += device/phh/treble/sepolicy
 PRODUCT_PACKAGE_OVERLAYS += device/phh/treble/overlay
 
 $(call inherit-product, vendor/hardware_overlay/overlay.mk)
@@ -28,7 +37,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 	ro.build.version.all_codenames=$(PLATFORM_VERSION_ALL_CODENAMES) \
 	ro.build.version.release=$(PLATFORM_VERSION) \
 	ro.build.version.security_patch=$(PLATFORM_SECURITY_PATCH) \
-	ro.logd.auditd=true
+	ro.logd.auditd=true \
+	ro.logd.kernel=true \
 	
 #Huawei HiSuite (also other OEM custom programs I guess) it's of no use in AOSP builds
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \

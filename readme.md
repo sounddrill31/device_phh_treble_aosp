@@ -21,4 +21,3 @@ GSI device tree aiming to build Project Elixir in compatibility with multiple de
 * [Xiaomi](https://github.com/phhusson/treble_experimentations/wiki/Xiaomi)
 * [ZTE and Nubia](https://github.com/phhusson/treble_experimentations/wiki/ZTE-and-Nubia)
 * [Miscellaneous](https://github.com/phhusson/treble_experimentations/wiki/Miscellaneous)
-

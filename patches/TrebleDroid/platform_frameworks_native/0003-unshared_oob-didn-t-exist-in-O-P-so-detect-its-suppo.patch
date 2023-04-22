@@ -1,8 +1,8 @@
-From 34fe8f451269f303fa9c865a5ce34440557d3aaa Mon Sep 17 00:00:00 2001
+From 56df5f0d85b8d83c67b0602499eba3a9505bcebc Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Tue, 5 Jan 2021 23:44:00 +0100
-Subject: [PATCH 3/9] unshared_oob didn't exist in O/P, so detect its supported
- based on vndk version
+Subject: [PATCH 03/10] unshared_oob didn't exist in O/P, so detect its
+ supported based on vndk version
 
 ---
  cmds/installd/migrate_legacy_obb_data.sh | 2 +-

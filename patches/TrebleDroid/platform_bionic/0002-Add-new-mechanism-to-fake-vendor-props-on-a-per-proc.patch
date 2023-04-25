@@ -1,4 +1,4 @@
-From 66d0c2154ea360382738da27a721ff577e4fe0c2 Mon Sep 17 00:00:00 2001
+From b90acd447a74686d05f784fbefa4248cbe86acae Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sat, 19 Feb 2022 08:20:25 -0500
 Subject: [PATCH 2/3] Add new mechanism to fake vendor props on a per-process
@@ -11,7 +11,7 @@ then ro.product.device/ro.product.manufacturer is read from vendor
  1 file changed, 38 insertions(+)
 
 diff --git a/libc/system_properties/system_properties.cpp b/libc/system_properties/system_properties.cpp
-index 1cb15c3df..d6e7e3e68 100644
+index 1cb15c3..d6e7e3e 100644
 --- a/libc/system_properties/system_properties.cpp
 +++ b/libc/system_properties/system_properties.cpp
 @@ -35,6 +35,7 @@
@@ -74,5 +74,5 @@ index 1cb15c3df..d6e7e3e68 100644
  
    if (pi != nullptr) {
 -- 
-2.25.1
+2.40.0
 

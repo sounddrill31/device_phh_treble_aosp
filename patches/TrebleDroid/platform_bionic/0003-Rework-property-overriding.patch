@@ -1,4 +1,4 @@
-From 530cd7391634cd547681c99d970c3ad37f0c779f Mon Sep 17 00:00:00 2001
+From af38d5faee369edbb39d472723893d3e3fe3b80f Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Thu, 19 Jan 2023 16:44:01 -0500
 Subject: [PATCH 3/3] Rework property overriding
@@ -12,7 +12,7 @@ Subject: [PATCH 3/3] Rework property overriding
  1 file changed, 58 insertions(+), 19 deletions(-)
 
 diff --git a/libc/system_properties/system_properties.cpp b/libc/system_properties/system_properties.cpp
-index d6e7e3e68..40ff48bad 100644
+index d6e7e3e..40ff48b 100644
 --- a/libc/system_properties/system_properties.cpp
 +++ b/libc/system_properties/system_properties.cpp
 @@ -35,6 +35,7 @@
@@ -141,5 +141,5 @@ index d6e7e3e68..40ff48bad 100644
  
    if (pi != nullptr) {
 -- 
-2.25.1
+2.40.0
 

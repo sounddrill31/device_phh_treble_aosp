@@ -1,4 +1,4 @@
-From 2984d33944c6257c446e7f7808108e36ccbdd598 Mon Sep 17 00:00:00 2001
+From 6069918b6a09a19453e0655edbdbaff6cf6a4c9d Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Wed, 26 Oct 2022 18:02:18 -0400
 Subject: [PATCH] Restore back the behavior of isValid(): It is legal to have
@@ -12,7 +12,7 @@ Change-Id: Ie7815c186400614f0c6b483c04aa8971af348380
  1 file changed, 8 insertions(+), 5 deletions(-)
 
 diff --git a/common/native/bpf_headers/include/bpf/BpfMap.h b/common/native/bpf_headers/include/bpf/BpfMap.h
-index 2bee2ee4..9e8a7836 100644
+index 2bee2ee..9e8a783 100644
 --- a/common/native/bpf_headers/include/bpf/BpfMap.h
 +++ b/common/native/bpf_headers/include/bpf/BpfMap.h
 @@ -50,14 +50,17 @@ class BpfMap {
@@ -39,5 +39,5 @@ index 2bee2ee4..9e8a7836 100644
  
      BpfMap<Key, Value>(bpf_map_type map_type, uint32_t max_entries, uint32_t map_flags = 0) {
 -- 
-2.25.1
+2.40.0
 

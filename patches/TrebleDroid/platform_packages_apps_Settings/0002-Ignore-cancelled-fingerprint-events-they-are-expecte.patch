@@ -1,7 +1,7 @@
-From 870e9080c2fff774590577251d2e8fb0ccadcdd5 Mon Sep 17 00:00:00 2001
+From 4a168c3ab11d9149adf5ba5528937cd73f643b39 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Mon, 2 May 2022 17:44:28 -0400
-Subject: [PATCH 2/2] Ignore cancelled fingerprint events, they are expected,
+Subject: [PATCH 2/3] Ignore cancelled fingerprint events, they are expected,
  plus add more fingerprint enroll logs
 
 ---
@@ -10,7 +10,7 @@ Subject: [PATCH 2/2] Ignore cancelled fingerprint events, they are expected,
  2 files changed, 5 insertions(+), 1 deletion(-)
 
 diff --git a/src/com/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling.java b/src/com/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling.java
-index 2eadc33c85..720c22b316 100644
+index 2eadc33..720c22b 100644
 --- a/src/com/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling.java
 +++ b/src/com/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling.java
 @@ -757,6 +757,9 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
@@ -31,7 +31,7 @@ index 2eadc33c85..720c22b316 100644
 \ No newline at end of file
 +}
 diff --git a/src/com/android/settings/biometrics/fingerprint/FingerprintEnrollFindSensor.java b/src/com/android/settings/biometrics/fingerprint/FingerprintEnrollFindSensor.java
-index 89bda20cd7..93c3e6186c 100644
+index 89bda20..93c3e61 100644
 --- a/src/com/android/settings/biometrics/fingerprint/FingerprintEnrollFindSensor.java
 +++ b/src/com/android/settings/biometrics/fingerprint/FingerprintEnrollFindSensor.java
 @@ -326,6 +326,7 @@ public class FingerprintEnrollFindSensor extends BiometricEnrollBase implements
@@ -43,5 +43,5 @@ index 89bda20cd7..93c3e6186c 100644
              proceedToEnrolling(false /* cancelEnrollment */);
          } else {
 -- 
-2.25.1
+2.40.0
 

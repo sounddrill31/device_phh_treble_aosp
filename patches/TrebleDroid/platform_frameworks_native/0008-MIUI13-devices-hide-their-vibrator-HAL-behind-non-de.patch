@@ -1,4 +1,4 @@
-From ee02331ca22c7afd68360ad507264c7d98d16e19 Mon Sep 17 00:00:00 2001
+From 20b117e38eba30f0bd1f7f9daf2ba1a3c858d8fd Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Fri, 25 Mar 2022 05:37:56 -0400
 Subject: [PATCH 08/10] MIUI13 devices hide their vibrator HAL behind
@@ -9,10 +9,10 @@ Subject: [PATCH 08/10] MIUI13 devices hide their vibrator HAL behind
  1 file changed, 6 insertions(+)
 
 diff --git a/services/vibratorservice/VibratorHalController.cpp b/services/vibratorservice/VibratorHalController.cpp
-index c1795f5c32..345016efd6 100644
+index 345016e..3e7df15 100644
 --- a/services/vibratorservice/VibratorHalController.cpp
 +++ b/services/vibratorservice/VibratorHalController.cpp
-@@ -59,6 +59,12 @@ std::shared_ptr<HalWrapper> connectHal(std::shared_ptr<CallbackScheduler> schedu
+@@ -65,6 +65,12 @@ std::shared_ptr<HalWrapper> connectHal(std::shared_ptr<CallbackScheduler> schedu
          return std::make_shared<AidlHalWrapper>(std::move(scheduler), aidlHal);
      }
  
@@ -26,5 +26,5 @@ index c1795f5c32..345016efd6 100644
      if (halV1_0 == nullptr) {
          ALOGV("Vibrator HAL service not available.");
 -- 
-2.25.1
+2.40.0
 

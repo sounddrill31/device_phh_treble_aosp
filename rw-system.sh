@@ -84,6 +84,14 @@ fixSPL() {
 	if [ -z "$Arelease" ] || [ -z "$spl" ];then
 		return 0
 	fi
+
+    # Found on Cubot Pocket 3: trustkernel work only on stock model name or AOSP GSI model name
+    if [ -f /vendor/bin/hw/android.hardware.keymaster@4.1-service.trustkernel ] && [ -f /proc/tkcore/tkcore_log ];then
+        setprop debug.phh.props.teed keymaster
+        # Process name is android.hardware.keymaster@4.1-service.trustkernel
+        setprop debug.phh.props.ice.trustkernel keymaster
+    fi
+
         setprop ro.keymaster.brn Android
 
         if getprop ro.vendor.build.fingerprint |grep -qiE 'samsung.*star.*lte';then
@@ -1104,10 +1112,6 @@ if [ -f /vendor/bin/ccci_rpcd ];then
     setprop debug.phh.props.ccci_rpcd vendor
 fi
 
-if getprop ro.vendor.build.fingerprint | grep -qi -e iaomi/mona; then
-    copyprop ro.product.manufacturer ro.product.vendor.manufacturer
-fi
-
 if getprop ro.vendor.build.fingerprint | grep -iq -e motorola/liber; then
   cp /vendor/etc/audio_policy_configuration.xml /mnt/phh/
   sed -i '/r_submix_audio_policy_configuration/a \t<xi:include href="/vendor/etc/a2dp_audio_policy_configuration.xml"/>' /mnt/phh/audio_policy_configuration.xml
@@ -1129,3 +1133,6 @@ fi
 
 mount -o bind /mnt/phh/empty_dir /vendor/app/qti-logkit
 mount -o bind /mnt/phh/empty_dir /vendor/app/qti-logkit-lite
+
+# Redirect vendor props for QCOM hwcomposer
+setprop debug.phh.props.omposer-service vendor

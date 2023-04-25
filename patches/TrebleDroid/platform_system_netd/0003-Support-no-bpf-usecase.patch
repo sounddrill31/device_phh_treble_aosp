@@ -1,4 +1,4 @@
-From 5c2da7851c535ad6afe1190f891224316023af3d Mon Sep 17 00:00:00 2001
+From 4f3d0658e594b12d7abc53ea771fb819d40ef9f8 Mon Sep 17 00:00:00 2001
 From: ChonDoit <thphantomblog@gmail.com>
 Date: Fri, 7 Oct 2022 02:43:21 +0000
 Subject: [PATCH 3/4] Support no-bpf usecase
@@ -9,7 +9,7 @@ Change-Id: Ic759e2cfaf11705169a4a6b677b0e5aca26907b3
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/server/Controllers.cpp b/server/Controllers.cpp
-index 00ee186d..faa6f135 100644
+index 00ee186..faa6f13 100644
 --- a/server/Controllers.cpp
 +++ b/server/Controllers.cpp
 @@ -284,7 +284,7 @@ void Controllers::init() {
@@ -22,5 +22,5 @@ index 00ee186d..faa6f135 100644
      gLog.info("Enabling bandwidth control: %" PRId64 "us", s.getTimeAndResetUs());
  
 -- 
-2.25.1
+2.40.0
 

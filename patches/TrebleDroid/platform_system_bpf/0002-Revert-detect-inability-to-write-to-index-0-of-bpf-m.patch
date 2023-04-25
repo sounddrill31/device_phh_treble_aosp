@@ -1,4 +1,4 @@
-From febe45a600f6ae9c4412ea0b325c87f65239ca0f Mon Sep 17 00:00:00 2001
+From ae51b2682dfec14b108f84e0c8b6441c1880d44d Mon Sep 17 00:00:00 2001
 From: Andy CrossGate Yan <GeForce8800Ultra@gmail.com>
 Date: Wed, 19 Oct 2022 02:20:05 +0000
 Subject: [PATCH 2/2] Revert "detect inability to write to index != 0 of bpf
@@ -30,5 +30,5 @@ index bbfa7a8..9ace0fa 100644
          ALOGE("Failed to set bpf.progs_loaded property");
          return 1;
 -- 
-2.25.1
+2.40.0
 

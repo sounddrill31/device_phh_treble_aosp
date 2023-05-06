@@ -1,4 +1,4 @@
-From 9943a808205bf6fde7c4f7d013e894660b0f7a38 Mon Sep 17 00:00:00 2001
+From 6cf014b8aeefd0e83c8568eacca35c8268547197 Mon Sep 17 00:00:00 2001
 From: ChonDoit <thphantomblog@gmail.com>
 Date: Sat, 6 Aug 2022 15:20:41 +0000
 Subject: [PATCH 11/14] Add offline Charge Service
@@ -48,5 +48,5 @@ index aaf0b32..0e099bc 100644
      class_start charger
  
 -- 
-2.40.0
+2.25.1
 

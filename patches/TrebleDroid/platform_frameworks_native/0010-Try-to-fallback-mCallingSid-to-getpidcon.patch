@@ -1,4 +1,4 @@
-From daa3f6cbd88204b2347e450313b7e3e0b2d6d0a5 Mon Sep 17 00:00:00 2001
+From d69f328c33f904664c97edd399224ddc39978a25 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Wed, 20 Oct 2021 09:39:47 -0400
 Subject: [PATCH 10/10] Try to fallback mCallingSid to getpidcon
@@ -102,5 +102,5 @@ index 3c97dca..b15ac9b 100644
              mCallingUid = origUid;
              mStrictModePolicy = origStrictModePolicy;
 -- 
-2.40.0
+2.25.1
 

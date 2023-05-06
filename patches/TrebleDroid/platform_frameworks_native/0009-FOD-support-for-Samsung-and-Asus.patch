@@ -1,4 +1,4 @@
-From 40b134671ee7e2604d5874a35b5f8e9590e2cd3b Mon Sep 17 00:00:00 2001
+From d974fdc170e65b5b9b7b23b7dc10e9ce374410fc Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sun, 18 Dec 2022 18:17:30 -0500
 Subject: [PATCH 09/10] FOD support for Samsung and Asus
@@ -20,7 +20,7 @@ Subject: [PATCH 09/10] FOD support for Samsung and Asus
  13 files changed, 78 insertions(+), 5 deletions(-)
 
 diff --git a/libs/gui/BLASTBufferQueue.cpp b/libs/gui/BLASTBufferQueue.cpp
-index 24a5295..de01525 100644
+index f26aab8..fbc54b0 100644
 --- a/libs/gui/BLASTBufferQueue.cpp
 +++ b/libs/gui/BLASTBufferQueue.cpp
 @@ -33,11 +33,20 @@
@@ -44,7 +44,7 @@ index 24a5295..de01525 100644
  namespace {
  inline const char* boolToString(bool b) {
      return b ? "true" : "false";
-@@ -147,9 +156,16 @@ BLASTBufferQueue::BLASTBufferQueue(const std::string& name, bool updateDestinati
+@@ -152,9 +161,16 @@ BLASTBufferQueue::BLASTBufferQueue(const std::string& name, bool updateDestinati
  
      // safe default, most producers are expected to override this
      mProducer->setMaxDequeuedBufferCount(2);
@@ -279,5 +279,5 @@ index d0d3c2e..c40986f 100644
      class CommandWriter : public CommandWriterBase {
      public:
 -- 
-2.40.0
+2.25.1
 

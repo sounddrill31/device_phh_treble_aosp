@@ -1,4 +1,4 @@
-From af38d5faee369edbb39d472723893d3e3fe3b80f Mon Sep 17 00:00:00 2001
+From 79a7c7d7832ad0929387aa56d437d1336a973773 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Thu, 19 Jan 2023 16:44:01 -0500
 Subject: [PATCH 3/3] Rework property overriding
@@ -141,5 +141,5 @@ index d6e7e3e..40ff48b 100644
  
    if (pi != nullptr) {
 -- 
-2.40.0
+2.25.1
 

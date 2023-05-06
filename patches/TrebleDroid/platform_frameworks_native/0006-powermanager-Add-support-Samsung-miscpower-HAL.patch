@@ -1,4 +1,4 @@
-From ae3e73b944ec66bbb27e5d715cf5ba3a6bb24bc9 Mon Sep 17 00:00:00 2001
+From 5d1fa04d337c6630aa216965bec9185cab0ea801 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Mon, 27 Dec 2021 18:00:43 -0500
 Subject: [PATCH 06/10] powermanager: Add support Samsung miscpower HAL
@@ -295,5 +295,5 @@ index d74bd23..a83990f 100644
  
  } // namespace power
 -- 
-2.40.0
+2.25.1
 

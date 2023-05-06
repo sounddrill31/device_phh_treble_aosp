@@ -1,7 +1,7 @@
-From 298f4ac3416e2ef26f6d3887b5f05cdf7bef1e5e Mon Sep 17 00:00:00 2001
+From c32ef6653378b454cd05588f79b5f8e00ad1016a Mon Sep 17 00:00:00 2001
 From: Peter Cai <peter@typeblog.net>
 Date: Thu, 18 Aug 2022 15:44:46 -0400
-Subject: [PATCH 01/14] APM: Restore S, R and Q behavior respectively for
+Subject: [PATCH 01/13] APM: Restore S, R and Q behavior respectively for
  telephony audio
 
 This conditionally reverts part of b2e5cb (T), 51c9cc (S) and afd4ce (R)
@@ -313,5 +313,5 @@ index a69e088..f876201 100644
          SourceClientCollection mAudioSources;
  
 -- 
-2.40.0
+2.25.1
 

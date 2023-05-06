@@ -1,4 +1,4 @@
-From 47903e6cc2bc1d8ee431e3fe5d9617c70a69afe0 Mon Sep 17 00:00:00 2001
+From 67a47c870f21e1d7c790cd4b337e72391ae28b42 Mon Sep 17 00:00:00 2001
 From: Andreas Schneider <asn@cryptomilk.org>
 Date: Sat, 12 Nov 2022 00:35:46 +0000
 Subject: [PATCH] On Samsung devices, we need to tell Audio HAL if we're
@@ -63,5 +63,5 @@ index b237e7d..73579cb 100644
              default:
                  Log.e(TAG, "processWBSEvent: unknown wbsConfig " + wbsConfig);
 -- 
-2.40.0
+2.25.1
 

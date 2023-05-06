@@ -1,4 +1,4 @@
-From 92f41d860f6c17c7bd1e8b4849faa1e3da2c858f Mon Sep 17 00:00:00 2001
+From 31ee0ee61a9491e78f28264f882e2ad97124edd8 Mon Sep 17 00:00:00 2001
 From: Alberto Ponces <ponces26@gmail.com>
 Date: Wed, 28 Sep 2022 17:04:03 +0100
 Subject: [PATCH 03/14] Revert "Remove support for AVB 1.0."
@@ -151,7 +151,7 @@ index f1ec0bb..8bfccd9 100644
 -    return true;
 -}
 diff --git a/fs_mgr/fs_mgr_fstab.cpp b/fs_mgr/fs_mgr_fstab.cpp
-index 8c719c8..9c77299 100644
+index fc200b2..2933b61 100644
 --- a/fs_mgr/fs_mgr_fstab.cpp
 +++ b/fs_mgr/fs_mgr_fstab.cpp
 @@ -167,10 +167,12 @@ bool ParseFsMgrFlags(const std::string& flags, FstabEntry* entry) {
@@ -731,7 +731,7 @@ index 0000000..efa2180
 +    return true;
 +}
 diff --git a/fs_mgr/include_fstab/fstab/fstab.h b/fs_mgr/include_fstab/fstab/fstab.h
-index f26fb24..d0b93a8 100644
+index ee1ff58..20656d1 100644
 --- a/fs_mgr/include_fstab/fstab/fstab.h
 +++ b/fs_mgr/include_fstab/fstab/fstab.h
 @@ -63,6 +63,7 @@ struct FstabEntry {
@@ -929,5 +929,5 @@ index 52a7f74..0a26aba 100644
    if (!any_changed) any_changed = overlayfs_setup(enable);
  
 -- 
-2.40.0
+2.25.1
 

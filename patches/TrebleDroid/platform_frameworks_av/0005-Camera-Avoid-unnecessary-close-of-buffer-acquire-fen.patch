@@ -1,7 +1,7 @@
-From d4de39fffd600b1a540752570ef727317eab2e61 Mon Sep 17 00:00:00 2001
+From e691d730d19d6f76ced0518f98e588f199c9a508 Mon Sep 17 00:00:00 2001
 From: Emilian Peev <epeev@google.com>
 Date: Fri, 5 Aug 2022 17:28:06 -0700
-Subject: [PATCH 05/14] Camera: Avoid unnecessary close of buffer acquire fence
+Subject: [PATCH 05/13] Camera: Avoid unnecessary close of buffer acquire fence
  fds
 
 According to the gralloc lock documentation:
@@ -17,7 +17,7 @@ Merged-In: Ieec34b54aaa7f0d773eccb593c3daaa3e41bae0b
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/services/camera/libcameraservice/device3/Camera3OutputStream.cpp b/services/camera/libcameraservice/device3/Camera3OutputStream.cpp
-index b841d8e..ecb6f44 100644
+index 6d9745e..42c17ea 100644
 --- a/services/camera/libcameraservice/device3/Camera3OutputStream.cpp
 +++ b/services/camera/libcameraservice/device3/Camera3OutputStream.cpp
 @@ -331,7 +331,7 @@ status_t Camera3OutputStream::fixUpHidlJpegBlobHeader(ANativeWindowBuffer* anwBu
@@ -29,7 +29,7 @@ index b841d8e..ecb6f44 100644
      if (res != OK) {
          ALOGE("%s: Failed to lock the buffer: %s (%d)", __FUNCTION__, strerror(-res), res);
          return res;
-@@ -1323,7 +1323,7 @@ void Camera3OutputStream::dumpImageToDisk(nsecs_t timestamp,
+@@ -1321,7 +1321,7 @@ void Camera3OutputStream::dumpImageToDisk(nsecs_t timestamp,
      void* mapped = nullptr;
      base::unique_fd fenceFd(dup(fence));
      status_t res = graphicBuffer->lockAsync(GraphicBuffer::USAGE_SW_READ_OFTEN, &mapped,
@@ -39,5 +39,5 @@ index b841d8e..ecb6f44 100644
          ALOGE("%s: Failed to lock the buffer: %s (%d)", __FUNCTION__, strerror(-res), res);
          return;
 -- 
-2.40.0
+2.25.1
 

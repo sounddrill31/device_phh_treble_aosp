@@ -1,4 +1,4 @@
-From 04c5d8f75661e64f503dbc1a3f097741a2bee7cd Mon Sep 17 00:00:00 2001
+From c4ce6b9cc5ec32831d0700102db80541870605e3 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Tue, 14 Aug 2018 19:33:03 +0200
 Subject: [PATCH 06/14] Detect allowed sdcard options based on vndk
@@ -39,5 +39,5 @@ index 622de5b..e580190 100644
      // handle older kernels that aren't updated yet.
      for (int i = 0; i <= new_opts_list.size(); ++i) {
 -- 
-2.40.0
+2.25.1
 

@@ -1,4 +1,4 @@
-From e991d4f05166109ef3a088016199f8f6647b2e4e Mon Sep 17 00:00:00 2001
+From f882e0380d27c85e8215a556656c627d6b06eefd Mon Sep 17 00:00:00 2001
 From: ponces <ponces26@gmail.com>
 Date: Mon, 7 Nov 2022 16:14:20 +0000
 Subject: [PATCH 8/8] Improve SELinux policy workaround on device/phh/treble
@@ -22,5 +22,5 @@ index 023fd6c..61c8864 100644
  
  	return SEPOL_OK;
 -- 
-2.40.0
+2.25.1
 

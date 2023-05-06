@@ -1,7 +1,7 @@
-From 1a1ee53f05fe8c53799a9663e7072b4db18e2984 Mon Sep 17 00:00:00 2001
+From fc5d523299e9fb2c8f80535095e32a45f4b69936 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sat, 13 Mar 2021 14:20:03 -0500
-Subject: [PATCH 08/14] Support Samsung R multi-cams
+Subject: [PATCH 08/13] Support Samsung R multi-cams
 
 Change-Id: If46f385e8dd16185cbf37ab083e6a1242e1d1555
 ---
@@ -22,7 +22,7 @@ index 4876df4..e8dcf66 100644
      ],
  
 diff --git a/services/camera/libcameraservice/common/hidl/HidlProviderInfo.cpp b/services/camera/libcameraservice/common/hidl/HidlProviderInfo.cpp
-index ac579b4..070c9ae 100644
+index 6becb00..6985bb3 100644
 --- a/services/camera/libcameraservice/common/hidl/HidlProviderInfo.cpp
 +++ b/services/camera/libcameraservice/common/hidl/HidlProviderInfo.cpp
 @@ -28,6 +28,7 @@
@@ -63,5 +63,5 @@ index ac579b4..070c9ae 100644
      else
          ret = interface->getCameraIdList(cb);
 -- 
-2.40.0
+2.25.1
 

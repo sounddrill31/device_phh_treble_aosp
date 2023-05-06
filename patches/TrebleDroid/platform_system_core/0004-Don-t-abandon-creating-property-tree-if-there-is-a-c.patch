@@ -1,4 +1,4 @@
-From f65f6ff9579789724a61769ad1c4fc1a38cafc6a Mon Sep 17 00:00:00 2001
+From 4655a3193545f9e282fd2df998389a309abdb520 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sun, 18 Oct 2020 18:14:47 +0200
 Subject: [PATCH 04/14] Don't abandon creating property tree if there is a
@@ -31,5 +31,5 @@ index 803657a..ecdd0be 100644
    }
  
 -- 
-2.40.0
+2.25.1
 

@@ -1,7 +1,7 @@
-From b70ab62c13d5712beb16053bdf3af21c93d923e3 Mon Sep 17 00:00:00 2001
+From abed0a4902e548e7d967a0ddabe13ffc63c26a30 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Wed, 29 Mar 2023 16:53:18 -0400
-Subject: [PATCH 13/14] Allow uname syscall in all seccomp -- This is needed
+Subject: [PATCH 13/13] Allow uname syscall in all seccomp -- This is needed
  because of the getCallingSid change in fw/n libbinder
 
 ---
@@ -164,5 +164,5 @@ index 51df1a2..6846c01 100644
  @include /apex/com.android.media/etc/seccomp_policy/crash_dump.x86_64.policy
  @include /apex/com.android.media/etc/seccomp_policy/code_coverage.x86_64.policy
 -- 
-2.40.0
+2.25.1
 

@@ -1,4 +1,4 @@
-From c222a3cc88c10a86a27176b51a91f98a066e98f8 Mon Sep 17 00:00:00 2001
+From e4a5358f4486a6b4ac05967cb2d5da2ccafbdfa3 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Wed, 12 Jan 2022 04:07:34 -0500
 Subject: [PATCH 07/10] Fix loading power hidl v1.0
@@ -27,5 +27,5 @@ index 9b20e67..cd7f231 100644
      if(hal == nullptr)
          hal = loadHal<V1_0::IPower>(gHalExists, gHalHidlV1_0, loadFn, "HIDL v1.0");
 -- 
-2.40.0
+2.25.1
 

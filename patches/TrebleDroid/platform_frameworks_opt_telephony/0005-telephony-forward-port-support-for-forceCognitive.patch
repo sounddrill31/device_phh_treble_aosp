@@ -1,4 +1,4 @@
-From c2496aca3ff2e494875eb633d82adb9fd7238f0e Mon Sep 17 00:00:00 2001
+From 3482e915832ae9f660706546212dbe5f72307987 Mon Sep 17 00:00:00 2001
 From: corneranchu <corneranchu@gmail.com>
 Date: Sat, 1 Oct 2022 01:49:58 +0000
 Subject: [PATCH 5/7] telephony: forward-port support for forceCognitive
@@ -51,5 +51,5 @@ index 28f69dc..3e73e2b 100755
              if (profileId == DATA_PROFILE_DEFAULT) {
                  profileId = getApnProfileID(apnContext.getApnType());
 -- 
-2.40.0
+2.25.1
 

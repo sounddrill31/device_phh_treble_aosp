@@ -1,4 +1,4 @@
-From db2de3ddb57bbd05ac5c51fc2da390a669d8c521 Mon Sep 17 00:00:00 2001
+From c30019911de2d601c76e590874228fc2284dd003 Mon Sep 17 00:00:00 2001
 From: Isaac Chen <tingyi364@gmail.com>
 Date: Wed, 23 Jun 2021 13:07:30 +0800
 Subject: [PATCH 05/14] init: Do not start console service when debuggable
@@ -27,5 +27,5 @@ index 25a7f8a..aaf0b32 100644
    # TODO(b/135984674): reset all necessary properties here.
    setprop sys.boot_completed ""
 -- 
-2.40.0
+2.25.1
 

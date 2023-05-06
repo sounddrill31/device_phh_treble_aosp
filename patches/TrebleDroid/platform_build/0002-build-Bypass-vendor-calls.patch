@@ -1,4 +1,4 @@
-From 98b81ed4a0493f383543faa08b6b4e09723235e9 Mon Sep 17 00:00:00 2001
+From 01a3ed8dba6684aa092978b816ea6f9460674c40 Mon Sep 17 00:00:00 2001
 From: Alberto Ponces <ponces26@gmail.com>
 Date: Mon, 18 Oct 2021 17:20:18 +0100
 Subject: [PATCH 2/4] build: Bypass vendor calls
@@ -26,5 +26,5 @@ index 01897b7..a0a7c0d 100644
  #
  # Special settings for GSI releasing
 -- 
-2.40.0
+2.25.1
 

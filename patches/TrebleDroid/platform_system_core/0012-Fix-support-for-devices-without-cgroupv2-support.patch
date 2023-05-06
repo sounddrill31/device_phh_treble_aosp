@@ -1,4 +1,4 @@
-From fdd7262e82b42ef53d303df00b0a2705b2797bc2 Mon Sep 17 00:00:00 2001
+From 217972eaf7f441f63bd2bbd214caab31a652c8bf Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Wed, 26 Oct 2022 17:59:11 -0400
 Subject: [PATCH 12/14] Fix support for devices without cgroupv2 support
@@ -32,5 +32,5 @@ index 34e8200..da19491 100644
  
      if (use_memcg) {
 -- 
-2.40.0
+2.25.1
 

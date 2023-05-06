@@ -1,7 +1,7 @@
-From 52e175bb17936db2b929992fda18f0a60c7733db Mon Sep 17 00:00:00 2001
+From c16184de61bbb288729cf648adda59c2ebd0c3a6 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sat, 16 Apr 2022 14:30:14 -0400
-Subject: [PATCH 09/14] Add a prop to change Samsung flash strength
+Subject: [PATCH 09/13] Add a prop to change Samsung flash strength
 
 ---
  services/camera/libcameraservice/Android.bp        |  1 +
@@ -21,7 +21,7 @@ index e8dcf66..d3fc8f0 100644
      ],
  
 diff --git a/services/camera/libcameraservice/common/hidl/HidlProviderInfo.cpp b/services/camera/libcameraservice/common/hidl/HidlProviderInfo.cpp
-index 070c9ae..41830f2 100644
+index 6985bb3..6ab8091 100644
 --- a/services/camera/libcameraservice/common/hidl/HidlProviderInfo.cpp
 +++ b/services/camera/libcameraservice/common/hidl/HidlProviderInfo.cpp
 @@ -29,6 +29,7 @@
@@ -32,7 +32,7 @@ index 070c9ae..41830f2 100644
  
  namespace {
  const bool kEnableLazyHal(property_get_bool("ro.camera.enableLazyHal", false));
-@@ -781,7 +782,18 @@ HidlProviderInfo::HidlDeviceInfo3::HidlDeviceInfo3(
+@@ -780,7 +781,18 @@ HidlProviderInfo::HidlDeviceInfo3::HidlDeviceInfo3(
  status_t HidlProviderInfo::HidlDeviceInfo3::setTorchMode(bool enabled) {
      using hardware::camera::common::V1_0::TorchMode;
      const sp<hardware::camera::device::V3_2::ICameraDevice> interface = startDeviceInterface();
@@ -53,5 +53,5 @@ index 070c9ae..41830f2 100644
  }
  
 -- 
-2.40.0
+2.25.1
 

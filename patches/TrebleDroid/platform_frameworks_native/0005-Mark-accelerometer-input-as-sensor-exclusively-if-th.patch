@@ -1,4 +1,4 @@
-From 8fc650f11073e116cd9d6549d385446a120fb4b9 Mon Sep 17 00:00:00 2001
+From b6017686bf1ded0ee62467b3b2f007d5105fd0c9 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sun, 12 Dec 2021 08:45:36 -0500
 Subject: [PATCH 05/10] Mark accelerometer input as sensor exclusively if there
@@ -34,5 +34,5 @@ index d6a6bd2..febce0a 100644
  
      // Check whether this device has switches.
 -- 
-2.40.0
+2.25.1
 

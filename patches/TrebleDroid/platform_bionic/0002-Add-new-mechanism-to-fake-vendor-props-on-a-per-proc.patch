@@ -1,4 +1,4 @@
-From b90acd447a74686d05f784fbefa4248cbe86acae Mon Sep 17 00:00:00 2001
+From 2327169616cdccc946f1a15602a79c052fc06651 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sat, 19 Feb 2022 08:20:25 -0500
 Subject: [PATCH 2/3] Add new mechanism to fake vendor props on a per-process
@@ -74,5 +74,5 @@ index 1cb15c3..d6e7e3e 100644
  
    if (pi != nullptr) {
 -- 
-2.40.0
+2.25.1
 

@@ -1,7 +1,7 @@
-From 6b288c870a6c3dd2feee336f8b27c37d187fdf15 Mon Sep 17 00:00:00 2001
+From 7239abcc0ba7867394cd4343a9d46d825228a3d7 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Tue, 1 Oct 2019 13:35:49 +0200
-Subject: [PATCH 02/14] Add (partial, cam id is hardcoded) support for Asus ZF6
+Subject: [PATCH 02/13] Add (partial, cam id is hardcoded) support for Asus ZF6
  motor camera
 
 Change-Id: Iea6e1370780a1d16f728748d1d948d092532d8fe
@@ -11,7 +11,7 @@ Change-Id: Iea6e1370780a1d16f728748d1d948d092532d8fe
  2 files changed, 29 insertions(+)
 
 diff --git a/services/camera/libcameraservice/CameraService.cpp b/services/camera/libcameraservice/CameraService.cpp
-index 7ac7a43..2c3a4af 100644
+index a012db8..3b11536 100644
 --- a/services/camera/libcameraservice/CameraService.cpp
 +++ b/services/camera/libcameraservice/CameraService.cpp
 @@ -26,6 +26,7 @@
@@ -90,5 +90,5 @@ index 1bb6e39..a9b68e1 100644
      // Client functionality
  
 -- 
-2.40.0
+2.25.1
 

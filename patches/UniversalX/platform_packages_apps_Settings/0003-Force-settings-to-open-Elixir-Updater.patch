@@ -1,4 +1,4 @@
-From 92d8c15d36b56bc969d51c0e8672d3aa8024d386 Mon Sep 17 00:00:00 2001
+From a04e8b414725422af6ac0b3bbe1c70a1a8336f54 Mon Sep 17 00:00:00 2001
 From: KrutosVIP <52695559+KrutosVIP@users.noreply.github.com>
 Date: Fri, 10 Mar 2023 09:26:42 +0100
 Subject: [PATCH 3/3] Force settings to open Elixir Updater
@@ -65,5 +65,5 @@ index b2a22ff..6642f02 100644
  
      @Override
 -- 
-2.40.0
+2.25.1
 

@@ -1,4 +1,4 @@
-From f1b2fc02fc0d4290482367b0a4a6790402388bf5 Mon Sep 17 00:00:00 2001
+From bec1fe26f36b696e7f602a318a5708b98ccfe3c9 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Wed, 26 Oct 2022 18:10:46 -0400
 Subject: [PATCH 2/3] BpfMap() implemented new checks for kernel >=4.14 but as
@@ -31,5 +31,5 @@ index 9ebef4d..ee30f3d 100644
          ALOGE("get ifaceIndexName map fd failed: %s", strerror(errno));
          return ret;
 -- 
-2.40.0
+2.25.1
 

@@ -247,3 +247,5 @@ include build/make/target/product/gsi_release.mk
 # Protect deskclock from power save
 PRODUCT_COPY_FILES += \
 	device/phh/treble/files/com.android.deskclock_whitelist.xml:system/etc/sysconfig/com.android.deskclock_whitelist.xml
+
+PRODUCT_PACKAGE_OVERLAYS += device/phh/treble/overlay-elixir

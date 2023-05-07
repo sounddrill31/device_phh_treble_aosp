@@ -1,6 +1,10 @@
 $(call inherit-product, device/phh/treble/base-pre.mk)
 include build/make/target/product/aosp_arm64.mk
 $(call inherit-product, device/phh/treble/base.mk)
+
+# Use Scudo instead of Jemalloc
+PRODUCT_USE_SCUDO := true
+
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080

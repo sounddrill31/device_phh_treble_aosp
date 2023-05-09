@@ -18,9 +18,9 @@ PRODUCT_MODEL := Phh-Treble GSI
 
 # Disable "emulator" characteristics
 PRODUCT_CHARACTERISTICS := device
-#PRODUCT_PACKAGES :=
 
 # Project-Elixir
+PRODUCT_PACKAGES += OverlaySettings
 IS_PHONE := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := false

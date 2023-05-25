@@ -1,0 +1,5 @@
+vendor/hardware_overlay
+vendor/vndk-tests
+vendor/interfaces
+vendor/lptools
+packages/apps/QcRilAm

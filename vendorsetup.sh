@@ -9,7 +9,7 @@ function patch() {
         git reset --hard FETCH_HEAD
     fi
 
-    git am $DIR/*
+    GIT_COMITTER_NAME=jenkins GIT_COMMITER_EMAIL=generic@email.com git am $DIR/*
     if [ $? -ne 0 ]; then echo "!!! WARNING: Patching failed."; fi
 }
 

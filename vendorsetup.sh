@@ -9,8 +9,12 @@ function patch() {
         git reset --hard FETCH_HEAD
     fi
 
-    git am --committer="jenkins <generic@email.com>" $DIR/*
+    git config --local user.name "jenkins"
+    git config --local user.email "generic@email.com"
+    git am $DIR/*
     if [ $? -ne 0 ]; then echo "!!! WARNING: Patching failed."; fi
+    git config --local --unset user.name
+    git config --local --unset user.email
 }
 
 function apply() {

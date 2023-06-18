@@ -33,6 +33,8 @@ function apply() {
     RESET=false
 }
 
+cd $TOP
+
 rm -rf vendor/hardware_overlay
 git clone https://github.com/trebledroid/vendor_hardware_overlay vendor/hardware_overlay -b pie --depth 1
 

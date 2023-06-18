@@ -11,29 +11,27 @@ function patch() {
 
     git config --local user.name "jenkins"
     git config --local user.email "generic@email.com"
-    git am $DIR/*
+    git am $FOLDER/*
     if [ $? -ne 0 ]; then echo "!!! WARNING: Patching failed."; fi
     git config --local --unset user.name
     git config --local --unset user.email
 }
 
 function apply() {
-    for DIR in $PATCHES/$1/*; do
-        PATCHDIR=$(basename "$DIR") # Remove additional path from DIR name
+    for FOLDER in $PATCHES/$1/*; do
+        PATCHDIR=$(basename "$FOLDER") # Remove additional path from DIR name
 
         SOURCEPATH=${PATCHDIR/platform_/} # Remove platform_ from dir name
         SOURCEPATH=${SOURCEPATH//_//} # replace _ with / to make a path to directory to patch
 
 	if [ $SOURCEPATH == "build" ]; then SOURCEPATH="build/make"; fi # Replace build with build/make
 
-        patch $DIR $SOURCEPATH
+        patch $FOLDER $SOURCEPATH
     done
 
     cd $TOP
     RESET=false
 }
-
-cd $TOP
 
 rm -rf vendor/hardware_overlay
 git clone https://github.com/trebledroid/vendor_hardware_overlay vendor/hardware_overlay -b pie --depth 1

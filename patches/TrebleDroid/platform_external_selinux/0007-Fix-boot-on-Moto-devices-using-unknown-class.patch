@@ -1,4 +1,4 @@
-From 47bb565d2744ca8e2424a987946673373e61c07b Mon Sep 17 00:00:00 2001
+From 9d35add6cc6306c09e7dae854a8ef954b117d38d Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Fri, 25 Oct 2019 13:29:20 +0200
 Subject: [PATCH 7/8] Fix boot on Moto devices using unknown class

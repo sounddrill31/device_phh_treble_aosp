@@ -1,4 +1,4 @@
-From 01a3ed8dba6684aa092978b816ea6f9460674c40 Mon Sep 17 00:00:00 2001
+From dc9e5175708d06a89b71e330ba225c92455ae84f Mon Sep 17 00:00:00 2001
 From: Alberto Ponces <ponces26@gmail.com>
 Date: Mon, 18 Oct 2021 17:20:18 +0100
 Subject: [PATCH 2/4] build: Bypass vendor calls

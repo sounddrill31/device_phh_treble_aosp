@@ -1,4 +1,4 @@
-From e9d5ec48834c8e6047628167e59fcab6e82453f7 Mon Sep 17 00:00:00 2001
+From 7bcb9e32f2efdef9cff1ff3855e46a1c35032d04 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Fri, 2 Mar 2018 22:49:55 +0100
 Subject: [PATCH 6/8] Enable multipl_decls by default. This is needed because

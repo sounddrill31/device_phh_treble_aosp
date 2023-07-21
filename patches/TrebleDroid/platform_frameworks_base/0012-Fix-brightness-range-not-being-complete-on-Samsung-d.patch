@@ -1,4 +1,4 @@
-From e38ca36af630907ce6ec4721a78488e90e006273 Mon Sep 17 00:00:00 2001
+From 02a828006ef15fc14129092a403b2b7c5e521325 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Tue, 29 Sep 2020 22:40:10 +0200
 Subject: [PATCH 12/36] Fix brightness range not being complete on Samsung
@@ -15,7 +15,7 @@ Change-Id: I4d97cbc32490949e83272b81ec6320a5483310b1
  1 file changed, 4 insertions(+), 2 deletions(-)
 
 diff --git a/services/core/java/com/android/server/power/PowerManagerService.java b/services/core/java/com/android/server/power/PowerManagerService.java
-index 6c24beff..e0d5b281 100644
+index 34c524a7..a9501771 100644
 --- a/services/core/java/com/android/server/power/PowerManagerService.java
 +++ b/services/core/java/com/android/server/power/PowerManagerService.java
 @@ -1111,9 +1111,11 @@ public final class PowerManagerService extends SystemService

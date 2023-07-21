@@ -1,4 +1,4 @@
-From d974fdc170e65b5b9b7b23b7dc10e9ce374410fc Mon Sep 17 00:00:00 2001
+From ac77db87770432263124725833d2097a0ba60b88 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sun, 18 Dec 2022 18:17:30 -0500
 Subject: [PATCH 09/10] FOD support for Samsung and Asus
@@ -14,13 +14,13 @@ Subject: [PATCH 09/10] FOD support for Samsung and Asus
  .../DisplayHardware/AidlComposerHal.h         |  2 ++
  .../DisplayHardware/ComposerHal.h             |  3 +++
  .../surfaceflinger/DisplayHardware/HWC2.cpp   |  8 +++++++
- .../surfaceflinger/DisplayHardware/HWC2.h     |  6 +++++
+ .../surfaceflinger/DisplayHardware/HWC2.h     |  5 ++++
  .../DisplayHardware/HidlComposerHal.cpp       |  7 ++++++
  .../DisplayHardware/HidlComposerHal.h         |  2 ++
- 13 files changed, 78 insertions(+), 5 deletions(-)
+ 13 files changed, 77 insertions(+), 5 deletions(-)
 
 diff --git a/libs/gui/BLASTBufferQueue.cpp b/libs/gui/BLASTBufferQueue.cpp
-index f26aab8..fbc54b0 100644
+index b8ea080..f6b6752 100644
 --- a/libs/gui/BLASTBufferQueue.cpp
 +++ b/libs/gui/BLASTBufferQueue.cpp
 @@ -33,11 +33,20 @@
@@ -44,7 +44,7 @@ index f26aab8..fbc54b0 100644
  namespace {
  inline const char* boolToString(bool b) {
      return b ? "true" : "false";
-@@ -152,9 +161,16 @@ BLASTBufferQueue::BLASTBufferQueue(const std::string& name, bool updateDestinati
+@@ -147,9 +156,16 @@ BLASTBufferQueue::BLASTBufferQueue(const std::string& name, bool updateDestinati
  
      // safe default, most producers are expected to override this
      mProducer->setMaxDequeuedBufferCount(2);
@@ -224,7 +224,7 @@ index c52e96d..82f6051 100644
  } // namespace HWC2
  } // namespace android
 diff --git a/services/surfaceflinger/DisplayHardware/HWC2.h b/services/surfaceflinger/DisplayHardware/HWC2.h
-index 24aef9b..c133528 100644
+index 24aef9b..138d144 100644
 --- a/services/surfaceflinger/DisplayHardware/HWC2.h
 +++ b/services/surfaceflinger/DisplayHardware/HWC2.h
 @@ -333,6 +333,9 @@ public:
@@ -237,11 +237,10 @@ index 24aef9b..c133528 100644
  };
  
  namespace impl {
-@@ -382,6 +385,9 @@ public:
+@@ -382,6 +385,8 @@ public:
      hal::Error setBrightness(float brightness) override;
      hal::Error setBlockingRegion(const android::Region& region) override;
  
-+ 
 +    // Proprietary HAL
 +    hal::Error setLayerClass(uint32_t layerClass) override;
  private:

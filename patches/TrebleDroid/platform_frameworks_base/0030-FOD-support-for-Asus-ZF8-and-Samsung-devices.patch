@@ -1,7 +1,7 @@
-From 94c4eacf781794f4370168d7b09e82096bbc65f1 Mon Sep 17 00:00:00 2001
+From 9e0b7d91de843c5086609951ef1e743ea2799a54 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sun, 18 Dec 2022 18:20:40 -0500
-Subject: [PATCH 30/36] FOD support for Asus ZF8 and Samsung devices
+Subject: [PATCH 30/38] FOD support for Asus ZF8 and Samsung devices
 
 Thanks Asus for providing a free device to make this support
 And thanks @davigamer987 for donating enough to get a Samsung FOD device
@@ -9,11 +9,11 @@ to make this
 ---
  packages/SystemUI/Android.bp                  |   1 +
  packages/SystemUI/res/values/config.xml       |   2 +-
- .../biometrics/UdfpsControllerOverlay.kt      |   8 +-
+ .../biometrics/UdfpsControllerOverlay.kt      |   7 +-
  .../android/systemui/biometrics/UdfpsView.kt  | 137 ++++++++++
  services/core/Android.bp                      |   7 +-
  .../server/biometrics/AuthService.java        | 238 +++++++++++++++++-
- 6 files changed, 388 insertions(+), 5 deletions(-)
+ 6 files changed, 387 insertions(+), 5 deletions(-)
 
 diff --git a/packages/SystemUI/Android.bp b/packages/SystemUI/Android.bp
 index f156a2c5..71c3a792 100644
@@ -41,22 +41,21 @@ index 5a795751..3a51b789 100644
  
      <!-- The time (in ms) needed to trigger the lock icon view's long-press affordance -->
 diff --git a/packages/SystemUI/src/com/android/systemui/biometrics/UdfpsControllerOverlay.kt b/packages/SystemUI/src/com/android/systemui/biometrics/UdfpsControllerOverlay.kt
-index baa46e87..05938da5 100644
+index baa46e87..fdbdf90f 100644
 --- a/packages/SystemUI/src/com/android/systemui/biometrics/UdfpsControllerOverlay.kt
 +++ b/packages/SystemUI/src/com/android/systemui/biometrics/UdfpsControllerOverlay.kt
-@@ -120,7 +120,10 @@ class UdfpsControllerOverlay @JvmOverloads constructor(
+@@ -120,7 +120,9 @@ class UdfpsControllerOverlay @JvmOverloads constructor(
          gravity = android.view.Gravity.TOP or android.view.Gravity.LEFT
          layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_ALWAYS
          flags = (Utils.FINGERPRINT_OVERLAY_LAYOUT_PARAM_FLAGS or
 -                WindowManager.LayoutParams.FLAG_SPLIT_TOUCH)
-+                WindowManager.LayoutParams.FLAG_SPLIT_TOUCH) or
 +                WindowManager.LayoutParams.FLAG_SPLIT_TOUCH) or
 +                WindowManager.LayoutParams.FLAG_DIM_BEHIND
 +        dimAmount = 0.0f
          privateFlags = WindowManager.LayoutParams.PRIVATE_FLAG_TRUSTED_OVERLAY
          // Avoid announcing window title.
          accessibilityTitle = " "
-@@ -189,6 +192,9 @@ class UdfpsControllerOverlay @JvmOverloads constructor(
+@@ -189,6 +191,9 @@ class UdfpsControllerOverlay @JvmOverloads constructor(
                      windowManager.addView(this, coreLayoutParams.updateDimensions(animation))
                      sensorRect = sensorBounds
                      touchExplorationEnabled = accessibilityManager.isTouchExplorationEnabled

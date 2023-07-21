@@ -1,18 +1,18 @@
-From 2572cf3ca55652487232a3a2b3babb0dfa23b8b7 Mon Sep 17 00:00:00 2001
+From 907db9f9385c5f69a4e4e7a7a00452b25242fb04 Mon Sep 17 00:00:00 2001
 From: KrutosVIP <52695559+KrutosVIP@users.noreply.github.com>
 Date: Thu, 16 Feb 2023 15:09:42 +0000
-Subject: [PATCH] SystemUI: Implement getting brightness from DisplayManager
- instead of reading values directly from sysfs
+Subject: [PATCH 38/38] SystemUI: Implement getting brightness from
+ DisplayManager instead of reading values directly from sysfs
 
 ---
  .../android/systemui/biometrics/UdfpsView.kt  | 23 +++++++++++--------
  1 file changed, 14 insertions(+), 9 deletions(-)
 
 diff --git a/packages/SystemUI/src/com/android/systemui/biometrics/UdfpsView.kt b/packages/SystemUI/src/com/android/systemui/biometrics/UdfpsView.kt
-index d2e98c181260..134454c2c600 100644
+index 5e15250b..dd912861 100644
 --- a/packages/SystemUI/src/com/android/systemui/biometrics/UdfpsView.kt
 +++ b/packages/SystemUI/src/com/android/systemui/biometrics/UdfpsView.kt
-@@ -34,6 +34,8 @@ import com.android.systemui.R
+@@ -36,6 +36,8 @@ import com.android.systemui.R
  import com.android.systemui.doze.DozeReceiver
  import java.io.File
  
@@ -21,17 +21,16 @@ index d2e98c181260..134454c2c600 100644
  import vendor.goodix.hardware.biometrics.fingerprint.V2_1.IGoodixFingerprintDaemon
  
  private const val TAG = "UdfpsView"
-@@ -221,19 +223,22 @@ Log.d("PHH", "Surface destroyed!")
- 
+@@ -241,18 +243,21 @@ Log.d("PHH", "Surface destroyed!")
          mySurfaceView.setVisibility(VISIBLE)
          Log.d("PHH", "setting surface visible!")
--
+ 
 -        val brightnessFile = File("/sys/class/backlight/panel/brightness")
 -        val maxBrightnessFile = File("/sys/class/backlight/panel/max_brightness")
-         
+-
          var brightness: Double = 0.0
          var maxBrightness: Double = 0.0
-         
+ 
 -        if (brightnessFile.exists() && maxBrightnessFile.exists()) {
 -            brightness = brightnessFile.readText().toDouble()
 -            maxBrightness = maxBrightnessFile.readText().toDouble()
@@ -54,5 +53,5 @@ index d2e98c181260..134454c2c600 100644
  
          // Assume HBM is max brightness
 -- 
-2.37.2
+2.25.1
 

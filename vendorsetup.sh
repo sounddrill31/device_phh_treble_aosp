@@ -12,7 +12,6 @@ function patch() {
     git config --local user.name "jenkins"
     git config --local user.email "generic@email.com"
     git am $FOLDER/*
-    git am --abort
     if [ $? -ne 0 ]; then echo "!!! WARNING: Patching failed."; fi
     git config --local --unset user.name
     git config --local --unset user.email

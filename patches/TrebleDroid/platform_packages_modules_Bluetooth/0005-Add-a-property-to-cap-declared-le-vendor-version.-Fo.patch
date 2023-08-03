@@ -1,4 +1,4 @@
-From 354d345bed3bf10e07f6228460e245e721299022 Mon Sep 17 00:00:00 2001
+From 10128c3292a893f106ccec9e115ed770d5d62026 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Tue, 30 May 2023 17:34:03 -0400
 Subject: [PATCH 5/5] Add a property to cap declared le vendor version. Found
@@ -9,10 +9,10 @@ Subject: [PATCH 5/5] Add a property to cap declared le vendor version. Found
  1 file changed, 11 insertions(+)
 
 diff --git a/system/gd/hci/controller.cc b/system/gd/hci/controller.cc
-index 6b9a3be..faeb893 100644
+index 885c18e..10359fa 100644
 --- a/system/gd/hci/controller.cc
 +++ b/system/gd/hci/controller.cc
-@@ -503,6 +503,13 @@ struct Controller::impl {
+@@ -513,6 +513,13 @@ struct Controller::impl {
      if (complete_view.IsValid()) {
        vendor_capabilities_.is_supported_ = 0x01;
  
@@ -26,7 +26,7 @@ index 6b9a3be..faeb893 100644
        // v0.55
        BaseVendorCapabilities base_vendor_capabilities = complete_view.GetBaseVendorCapabilities();
        vendor_capabilities_.max_advt_instances_ = base_vendor_capabilities.max_advt_instances_;
-@@ -518,6 +525,8 @@ struct Controller::impl {
+@@ -528,6 +535,8 @@ struct Controller::impl {
          return;
        }
  
@@ -35,7 +35,7 @@ index 6b9a3be..faeb893 100644
        // v0.95
        auto v95 = LeGetVendorCapabilitiesComplete095View::Create(complete_view);
        if (!v95.IsValid()) {
-@@ -532,6 +541,7 @@ struct Controller::impl {
+@@ -542,6 +551,7 @@ struct Controller::impl {
          return;
        }
  
@@ -43,7 +43,7 @@ index 6b9a3be..faeb893 100644
        // v0.96
        auto v96 = LeGetVendorCapabilitiesComplete096View::Create(v95);
        if (!v96.IsValid()) {
-@@ -543,6 +553,7 @@ struct Controller::impl {
+@@ -553,6 +563,7 @@ struct Controller::impl {
          return;
        }
  

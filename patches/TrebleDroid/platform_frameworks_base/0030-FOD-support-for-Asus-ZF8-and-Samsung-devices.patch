@@ -1,7 +1,7 @@
-From 864eca7cd598771173c72c0325fcc0c5892b02af Mon Sep 17 00:00:00 2001
+From 2d178458a201b2396d466ee73eec50c213781a4e Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sun, 18 Dec 2022 18:20:40 -0500
-Subject: [PATCH 30/38] FOD support for Asus ZF8 and Samsung devices
+Subject: [PATCH 30/36] FOD support for Asus ZF8 and Samsung devices
 
 Thanks Asus for providing a free device to make this support
 And thanks @davigamer987 for donating enough to get a Samsung FOD device
@@ -30,7 +30,7 @@ index f156a2c5..71c3a792 100644
          "faceunlock_framework",
          "vendor.lineage.powershare-V1.0-java",
 diff --git a/packages/SystemUI/res/values/config.xml b/packages/SystemUI/res/values/config.xml
-index 5a795751..3a51b789 100644
+index c8f86563..580a530b 100644
 --- a/packages/SystemUI/res/values/config.xml
 +++ b/packages/SystemUI/res/values/config.xml
 @@ -585,7 +585,7 @@

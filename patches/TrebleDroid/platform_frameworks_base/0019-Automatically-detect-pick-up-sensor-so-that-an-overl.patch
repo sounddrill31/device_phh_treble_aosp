@@ -1,7 +1,7 @@
-From bfbb81fe227a9ffcdb9ffbade36c563181c77409 Mon Sep 17 00:00:00 2001
+From 243c11a148c5faa176731acc3b9ed79d1579e3a1 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sat, 20 Mar 2021 14:31:01 +0100
-Subject: [PATCH 19/38] Automatically detect pick up sensor, so that an overlay
+Subject: [PATCH 19/36] Automatically detect pick up sensor, so that an overlay
  is required for the sole purpose of enabling pulse doze on pick up sensor
 
 ---
@@ -9,10 +9,10 @@ Subject: [PATCH 19/38] Automatically detect pick up sensor, so that an overlay
  1 file changed, 17 insertions(+), 2 deletions(-)
 
 diff --git a/core/java/android/hardware/display/AmbientDisplayConfiguration.java b/core/java/android/hardware/display/AmbientDisplayConfiguration.java
-index 532890f1..0dfb2308 100644
+index 0f353ad7..d2001c8d 100644
 --- a/core/java/android/hardware/display/AmbientDisplayConfiguration.java
 +++ b/core/java/android/hardware/display/AmbientDisplayConfiguration.java
-@@ -25,6 +25,9 @@ import android.text.TextUtils;
+@@ -28,6 +28,9 @@ import android.text.TextUtils;
  import android.util.ArrayMap;
  import android.util.SparseArray;
  
@@ -22,7 +22,7 @@ index 532890f1..0dfb2308 100644
  import com.android.internal.R;
  import com.android.internal.util.ArrayUtils;
  
-@@ -118,8 +121,20 @@ public class AmbientDisplayConfiguration {
+@@ -123,8 +126,20 @@ public class AmbientDisplayConfiguration {
  
      /** @hide */
      public boolean dozePickupSensorAvailable() {

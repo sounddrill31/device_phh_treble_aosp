@@ -1013,8 +1013,6 @@ fi
 
 if [ "$board" = lahaina ]; then
 	setprop ro.netflix.bsp_rev Q875-32774-1
-	resetprop_phh ro.config.media_vol_steps 25
-	resetprop_phh ro.config.media_vol_default 15
 fi
 
 if [ "$board" = universal8825 ];then

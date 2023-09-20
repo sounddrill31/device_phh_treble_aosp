@@ -1,4 +1,4 @@
-From 536d3b337271eb9dfbe8c5cb18bfb954a5fe612c Mon Sep 17 00:00:00 2001
+From ecd0c43257d2a8cab58d35d7d0802bc24ca98ba7 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Mon, 21 Dec 2020 19:36:54 +0100
 Subject: [PATCH] Let vendor have priority over NFC config file, rather than
@@ -25,5 +25,5 @@ index 264968e..9260697 100644
    for (std::string path : search_path) {
      path.append(file_name);
 -- 
-2.25.1
+2.34.1
 

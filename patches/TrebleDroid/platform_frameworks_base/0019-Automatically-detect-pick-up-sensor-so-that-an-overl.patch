@@ -1,7 +1,7 @@
-From 243c11a148c5faa176731acc3b9ed79d1579e3a1 Mon Sep 17 00:00:00 2001
+From 65500ac1fceb0ef8e877d0e58e99d339e4462850 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sat, 20 Mar 2021 14:31:01 +0100
-Subject: [PATCH 19/36] Automatically detect pick up sensor, so that an overlay
+Subject: [PATCH 19/37] Automatically detect pick up sensor, so that an overlay
  is required for the sole purpose of enabling pulse doze on pick up sensor
 
 ---
@@ -46,5 +46,5 @@ index 0f353ad7..d2001c8d 100644
      /** @hide */
      public boolean tapGestureEnabled(int user) {
 -- 
-2.25.1
+2.34.1
 

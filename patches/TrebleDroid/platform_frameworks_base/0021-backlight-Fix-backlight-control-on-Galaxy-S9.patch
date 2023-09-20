@@ -1,7 +1,7 @@
-From e531578cc34f872cd8f98c039a1c8ae8ebcb2970 Mon Sep 17 00:00:00 2001
+From fc809c27984f851d3892da5f4ca9ff3c34346754 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sat, 24 Mar 2018 08:01:48 +0100
-Subject: [PATCH 21/36] backlight: Fix backlight control on Galaxy S9(+)
+Subject: [PATCH 21/37] backlight: Fix backlight control on Galaxy S9(+)
 
 Change-Id: I1fbbb47939c377597ef8ad6b88b2acea5f4acaa6
 
@@ -117,5 +117,5 @@ index 91f14de0..8fa9c4f3 100644
                  color = 0xff000000 | (color << 16) | (color << 8) | color;
                  setLightLocked(color, LIGHT_FLASH_NONE, 0, 0, brightnessMode);
 -- 
-2.25.1
+2.34.1
 

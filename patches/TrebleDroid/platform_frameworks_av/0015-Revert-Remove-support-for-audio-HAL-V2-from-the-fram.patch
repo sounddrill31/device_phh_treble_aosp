@@ -1,7 +1,7 @@
-From 5f88d6631fa84b46723e470a05816ba80c708a31 Mon Sep 17 00:00:00 2001
+From 397da837559494427fb24a109a1d23c0793dec62 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Mon, 11 Oct 2021 16:10:42 -0400
-Subject: [PATCH 15/23] Revert "Remove support for audio HAL V2 from the
+Subject: [PATCH 15/22] Revert "Remove support for audio HAL V2 from the
  framework"
 
 This reverts commit cbf517f837f7bf8a59f3ff8aa1e0e3e19612e251.
@@ -77,5 +77,5 @@ index d30883a..7bba88c 100644
      name: "libaudiohal@4.0",
      defaults: ["libaudiohal_default"],
 -- 
-2.25.1
+2.34.1
 

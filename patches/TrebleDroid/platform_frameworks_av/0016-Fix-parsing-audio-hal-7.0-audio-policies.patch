@@ -1,7 +1,7 @@
-From 5d94975095d7d001fc294a8135dcb0bf17f2d770 Mon Sep 17 00:00:00 2001
+From 5c3b54971f82ac4281cec2672e2552f2edcc7c2a Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sun, 30 Jan 2022 07:40:19 -0500
-Subject: [PATCH 16/23] Fix parsing audio hal 7.0 audio policies
+Subject: [PATCH 16/22] Fix parsing audio hal 7.0 audio policies
 
 Google changed separator from natural "," to weird " "
 We broke its support in "FIH devices: Fix "Earpiece" audio output"
@@ -25,5 +25,5 @@ index 9addf7d..9d3d9fd 100644
      //Some Foxconn devices have wrong earpiece channel mask, leading to no channel mask
      if(channelsMask.size() == 1 && *channelsMask.begin() == AUDIO_CHANNEL_IN_MONO && isOutput) {
 -- 
-2.25.1
+2.34.1
 

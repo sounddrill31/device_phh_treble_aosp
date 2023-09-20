@@ -1,7 +1,7 @@
-From 1445b52f9238030ed3f9a15e6538959c495edb35 Mon Sep 17 00:00:00 2001
+From bbc5f06b01d5fd4d20535a9a011c7fd66afcd69d Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Thu, 10 Nov 2022 13:30:50 -0500
-Subject: [PATCH 12/17] FDE is dead. Fallback FDE to no encryption, and FDE+FBE
+Subject: [PATCH 12/18] FDE is dead. Fallback FDE to no encryption, and FDE+FBE
  to FBE
 
 ---
@@ -34,5 +34,5 @@ index 5bed8e9..15a8d27 100644
              // The voldmanaged flag is followed by an = and the label, a colon and the partition
              // number or the word "auto", e.g. voldmanaged=sdcard:3
 -- 
-2.25.1
+2.34.1
 

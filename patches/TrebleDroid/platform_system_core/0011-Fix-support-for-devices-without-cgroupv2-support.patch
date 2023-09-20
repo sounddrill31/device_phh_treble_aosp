@@ -1,7 +1,7 @@
-From cb27eafda8dded182b06045b0731472f45fb4bf7 Mon Sep 17 00:00:00 2001
+From 50d00742a6eef491a43b89545844fc323fd51ff3 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Wed, 26 Oct 2022 17:59:11 -0400
-Subject: [PATCH 11/17] Fix support for devices without cgroupv2 support
+Subject: [PATCH 11/18] Fix support for devices without cgroupv2 support
 
 This is technically a revert of 1bd1746447.
 The warning inside the commit doesn't really apply to us, because the
@@ -32,5 +32,5 @@ index 7e43061..347464a 100644
  
      if (use_memcg) {
 -- 
-2.25.1
+2.34.1
 

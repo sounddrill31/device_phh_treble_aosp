@@ -1,4 +1,4 @@
-From 10128c3292a893f106ccec9e115ed770d5d62026 Mon Sep 17 00:00:00 2001
+From 71cdf4c8aa356d16c74459301d18e409e545ffef Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Tue, 30 May 2023 17:34:03 -0400
 Subject: [PATCH 5/5] Add a property to cap declared le vendor version. Found
@@ -52,5 +52,5 @@ index 885c18e..10359fa 100644
        auto v98 = LeGetVendorCapabilitiesComplete098View::Create(v96);
        if (!v98.IsValid()) {
 -- 
-2.25.1
+2.34.1
 

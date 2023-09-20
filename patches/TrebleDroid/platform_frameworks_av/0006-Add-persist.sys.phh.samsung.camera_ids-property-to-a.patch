@@ -1,7 +1,7 @@
-From 999aadf3bccbf73b091017673effd0f644358855 Mon Sep 17 00:00:00 2001
+From 3da8aaae6a70bc3ec6c942ab4d97f2c19b9835a9 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Thu, 14 May 2020 19:54:55 +0200
-Subject: [PATCH 06/23] Add persist.sys.phh.samsung.camera_ids property to
+Subject: [PATCH 06/22] Add persist.sys.phh.samsung.camera_ids property to
  access hidden Samsung cameras
 
 Change-Id: I2c7bf535272acc28ed2277e96c78ddd28a0b4593
@@ -11,10 +11,10 @@ Change-Id: I2c7bf535272acc28ed2277e96c78ddd28a0b4593
  2 files changed, 13 insertions(+), 2 deletions(-)
 
 diff --git a/services/camera/libcameraservice/Android.bp b/services/camera/libcameraservice/Android.bp
-index 2a8a7e6..74e3dea 100644
+index a74b13a..2be7579 100644
 --- a/services/camera/libcameraservice/Android.bp
 +++ b/services/camera/libcameraservice/Android.bp
-@@ -170,6 +170,7 @@ cc_library_shared {
+@@ -172,6 +172,7 @@ cc_library_shared {
          "android.hardware.camera.device@3.6",
          "android.hardware.camera.device@3.7",
          "android.hardware.camera.device-V1-ndk",
@@ -76,5 +76,5 @@ index e71f43c..97b5c8b 100644
          ALOGE("%s: Transaction error in getting camera ID list from provider '%s': %s",
                  __FUNCTION__, mProviderName.c_str(), linked.description().c_str());
 -- 
-2.25.1
+2.34.1
 

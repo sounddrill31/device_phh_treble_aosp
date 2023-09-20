@@ -1,4 +1,4 @@
-From a95062d36a28590130268bfa987c6a0239954c1c Mon Sep 17 00:00:00 2001
+From bef9c4da12e5027553154361bf81a50c6a852d88 Mon Sep 17 00:00:00 2001
 From: Raphael Mounier <mounierr07@gmail.com>
 Date: Tue, 22 Nov 2022 06:54:35 +0100
 Subject: [PATCH 7/7] Fix 3G signalstrength for huawei kirin (hi6250, hi3670)
@@ -232,5 +232,5 @@ index ffb9b4a..182b335 100644
  
      /**
 -- 
-2.25.1
+2.34.1
 

@@ -1,7 +1,7 @@
-From 76c82968594bdbecc5dc23c4c22a1cfe1645f70b Mon Sep 17 00:00:00 2001
+From 91cb870409ff3a662354b8469a3bf1bf559c57f5 Mon Sep 17 00:00:00 2001
 From: Isaac Chen <tingyi364@gmail.com>
 Date: Wed, 23 Jun 2021 13:07:30 +0800
-Subject: [PATCH 05/17] init: Do not start console service when debuggable
+Subject: [PATCH 05/18] init: Do not start console service when debuggable
 
 Google added a check for this in R, when it's running it will show a
 notification about that performance is impacted.
@@ -27,5 +27,5 @@ index 0dcce5a..e28014c 100644
    # TODO(b/135984674): reset all necessary properties here.
    setprop sys.boot_completed ""
 -- 
-2.25.1
+2.34.1
 

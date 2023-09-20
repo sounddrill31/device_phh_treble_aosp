@@ -1,7 +1,7 @@
-From bcc78f8462b62a4c90170b4d4c7cd8a90b27fee6 Mon Sep 17 00:00:00 2001
+From dab3e4a2e00af036c44e4fccc38cf2700659de33 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Mon, 20 Dec 2021 15:01:41 -0500
-Subject: [PATCH 25/36] Dynamically resize boot animation to match screen size
+Subject: [PATCH 25/37] Dynamically resize boot animation to match screen size
 
 Change-Id: I54e49fc6b8c670103852e212d1416e27ff976205
 ---
@@ -40,5 +40,5 @@ index 0a912b97..8c579c73 100644
      // ro.bootanim.set_orientation_<display_id>. Four values are supported: ORIENTATION_0,
      // ORIENTATION_90, ORIENTATION_180 and ORIENTATION_270.
 -- 
-2.25.1
+2.34.1
 

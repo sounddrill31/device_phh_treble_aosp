@@ -1,14 +1,14 @@
-From d6531078eb2ff87e01a1c41c649a7630a9702dac Mon Sep 17 00:00:00 2001
+From 4a0fdc0aae4347e43604541311d0def6a0078f5e Mon Sep 17 00:00:00 2001
 From: Peter Cai <peter@typeblog.net>
 Date: Wed, 1 Jun 2022 16:56:20 -0400
-Subject: [PATCH 05/36] Implement a persistent property to override the default
+Subject: [PATCH 05/37] Implement a persistent property to override the default
  primary camera (0)
 
 Change-Id: I49b45d00bf71d7932591b3516d49a680e1b6568b
 ---
  core/java/android/hardware/Camera.java                | 5 +++++
- core/java/android/hardware/camera2/CameraManager.java | 9 +++++++++
- 2 files changed, 14 insertions(+)
+ core/java/android/hardware/camera2/CameraManager.java | 8 ++++++++
+ 2 files changed, 13 insertions(+)
 
 diff --git a/core/java/android/hardware/Camera.java b/core/java/android/hardware/Camera.java
 index 0f2f2e4a..4b240a31 100644
@@ -27,13 +27,13 @@ index 0f2f2e4a..4b240a31 100644
          CameraInfo cameraInfo = new CameraInfo();
          for (int i = 0; i < numberOfCameras; i++) {
 diff --git a/core/java/android/hardware/camera2/CameraManager.java b/core/java/android/hardware/camera2/CameraManager.java
-index dd76e0a3..f40df168 100644
+index dd76e0a3..76308534 100644
 --- a/core/java/android/hardware/camera2/CameraManager.java
 +++ b/core/java/android/hardware/camera2/CameraManager.java
-@@ -1838,6 +1838,15 @@ public final class CameraManager {
+@@ -1837,6 +1837,14 @@ public final class CameraManager {
+                             return s1.compareTo(s2);
                          }
                      }});
- 
 +            // HAXX: Allow overriding default primary camera (assumed to be camera 0) via property
 +            // Should match with libcameraservice/common/CameraProviderManager.cpp
 +            int altPrimaryCamera = SystemProperties.getInt("persist.sys.alt_primary_camera", -1);
@@ -42,10 +42,9 @@ index dd76e0a3..f40df168 100644
 +                cameraIds[0] = cameraIds[altPrimaryCamera];
 +                cameraIds[altPrimaryCamera] = origPrimary;
 +            }
-+
+ 
          }
  
-         public static boolean cameraStatusesContains(CameraStatus[] cameraStatuses, String id) {
 -- 
-2.25.1
+2.34.1
 

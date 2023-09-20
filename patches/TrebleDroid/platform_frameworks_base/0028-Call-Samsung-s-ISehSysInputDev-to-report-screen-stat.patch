@@ -1,7 +1,7 @@
-From c8cc4fbd420faf3972105d1b51244f88f4492a39 Mon Sep 17 00:00:00 2001
+From 94223a20d3f102241da03e056a91bfeedb90ea3e Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Wed, 14 Dec 2022 17:21:00 -0500
-Subject: [PATCH 28/36] Call Samsung's ISehSysInputDev to report screen state
+Subject: [PATCH 28/37] Call Samsung's ISehSysInputDev to report screen state
  to touchscreen driver
 
 This fixes touchscreen not waking up on Galaxy F23
@@ -96,5 +96,5 @@ index 58a182a6..569db086 100644
                          // If we're entering a suspended (but not OFF) power state and we
                          // have a sidekick available, tell it now that it can take control.
 -- 
-2.25.1
+2.34.1
 

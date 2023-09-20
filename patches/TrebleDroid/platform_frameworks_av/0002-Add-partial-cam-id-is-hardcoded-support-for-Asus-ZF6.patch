@@ -1,7 +1,7 @@
-From c3070ad8d889d7867e1bc9eae1a278ef0df46d7a Mon Sep 17 00:00:00 2001
+From 00f78d5ce3ca389f3007d134c4180f4958164e12 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Tue, 1 Oct 2019 13:35:49 +0200
-Subject: [PATCH 02/23] Add (partial, cam id is hardcoded) support for Asus ZF6
+Subject: [PATCH 02/22] Add (partial, cam id is hardcoded) support for Asus ZF6
  motor camera
 
 Change-Id: Iea6e1370780a1d16f728748d1d948d092532d8fe
@@ -11,7 +11,7 @@ Change-Id: Iea6e1370780a1d16f728748d1d948d092532d8fe
  2 files changed, 29 insertions(+)
 
 diff --git a/services/camera/libcameraservice/CameraService.cpp b/services/camera/libcameraservice/CameraService.cpp
-index 038e07f..50aff1e 100644
+index 623eb8d..9fce227 100644
 --- a/services/camera/libcameraservice/CameraService.cpp
 +++ b/services/camera/libcameraservice/CameraService.cpp
 @@ -30,6 +30,7 @@
@@ -22,7 +22,7 @@ index 038e07f..50aff1e 100644
  #include <inttypes.h>
  #include <pthread.h>
  #include <poll.h>
-@@ -163,6 +164,7 @@ static std::set<String8> sServiceErrorEventSet;
+@@ -173,6 +174,7 @@ static std::set<String8> sServiceErrorEventSet;
  static std::string sCurrPackageName;
  
  CameraService::CameraService() :
@@ -30,7 +30,7 @@ index 038e07f..50aff1e 100644
          mEventLog(DEFAULT_EVENT_LOG_LENGTH),
          mNumberOfCameras(0),
          mNumberOfCamerasWithoutSystemCamera(0),
-@@ -2084,6 +2086,7 @@ Status CameraService::connectHelper(const sp<CALLBACK>& cameraCb, const String8&
+@@ -2094,6 +2096,7 @@ Status CameraService::connectHelper(const sp<CALLBACK>& cameraCb, const String8&
              mServiceLock.lock();
          } else {
              // Otherwise, add client to active clients list
@@ -38,7 +38,7 @@ index 038e07f..50aff1e 100644
              finishConnectLocked(client, partial, oomScoreOffset, systemNativeClient);
          }
  
-@@ -2203,6 +2206,27 @@ status_t CameraService::addOfflineClient(String8 cameraId, sp<BasicClient> offli
+@@ -2213,6 +2216,27 @@ status_t CameraService::addOfflineClient(String8 cameraId, sp<BasicClient> offli
      return OK;
  }
  
@@ -66,7 +66,7 @@ index 038e07f..50aff1e 100644
  Status CameraService::turnOnTorchWithStrengthLevel(const String16& cameraId, int32_t torchStrength,
          const sp<IBinder>& clientBinder) {
      Mutex::Autolock lock(mServiceLock);
-@@ -3435,6 +3459,8 @@ binder::Status CameraService::BasicClient::disconnect() {
+@@ -3445,6 +3469,8 @@ binder::Status CameraService::BasicClient::disconnect() {
      }
      mDisconnected = true;
  
@@ -90,5 +90,5 @@ index ec65ed0..df48b58 100644
      // Client functionality
  
 -- 
-2.25.1
+2.34.1
 

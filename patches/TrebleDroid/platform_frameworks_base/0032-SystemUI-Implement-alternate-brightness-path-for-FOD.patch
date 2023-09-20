@@ -1,7 +1,7 @@
-From 22b8d7ce0cbde1b22294c5b25d1eba08dad57eb0 Mon Sep 17 00:00:00 2001
+From 76184f83b223083cae47989b787de1050d9d5f02 Mon Sep 17 00:00:00 2001
 From: ItsLynix <71310187+ItsLynix@users.noreply.github.com>
 Date: Sat, 28 Jan 2023 10:25:16 +0100
-Subject: [PATCH 32/36] SystemUI: Implement alternate brightness path for FOD
+Subject: [PATCH 32/37] SystemUI: Implement alternate brightness path for FOD
 
 ---
  .../com/android/systemui/biometrics/UdfpsView.kt  | 15 +++++++++++++--
@@ -34,5 +34,5 @@ index e85e6f7b..5e15250b 100644
          // Assume HBM is max brightness
          val dim = 1.0 - Math.pow( (brightness / maxBrightness), 1/2.3);
 -- 
-2.25.1
+2.34.1
 

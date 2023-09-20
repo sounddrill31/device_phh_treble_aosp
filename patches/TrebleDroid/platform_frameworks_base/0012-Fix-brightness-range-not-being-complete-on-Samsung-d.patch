@@ -1,7 +1,7 @@
-From 640076e950e9c2258d87bcae440fe047d85750c7 Mon Sep 17 00:00:00 2001
+From 2568858184fe1404f00586fd20bda1f3d99aee45 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Tue, 29 Sep 2020 22:40:10 +0200
-Subject: [PATCH 12/36] Fix brightness range not being complete on Samsung
+Subject: [PATCH 12/37] Fix brightness range not being complete on Samsung
  devices
 
 On some devices, minimum brightness is 0, which totally messes with
@@ -33,5 +33,5 @@ index d93c5cf6..64dd93d1 100644
                      mContext.getResources().getInteger(com.android.internal.R.integer
                              .config_screenBrightnessSettingMaximum));
 -- 
-2.25.1
+2.34.1
 

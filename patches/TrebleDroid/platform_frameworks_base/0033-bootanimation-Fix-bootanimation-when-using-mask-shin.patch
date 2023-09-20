@@ -1,7 +1,7 @@
-From 93fa6c2c134fe3e7069628d3e018391c4ee3907c Mon Sep 17 00:00:00 2001
+From 0483eb56a30ec0b27870064ca5f5ace3c8954834 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Wed, 10 May 2023 11:28:27 -0400
-Subject: [PATCH 33/36] bootanimation: Fix bootanimation when using mask+shine
+Subject: [PATCH 33/37] bootanimation: Fix bootanimation when using mask+shine
  rather than animation
 
 This was broken by the commit that automatically resizes animations
@@ -61,5 +61,5 @@ index 8c579c73..c124be01 100644
  
      // Rotate the boot animation according to the value specified in the sysprop
 -- 
-2.25.1
+2.34.1
 

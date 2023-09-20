@@ -1,7 +1,7 @@
-From 4320014adfc3b6a7943bf746570e8eac9366c287 Mon Sep 17 00:00:00 2001
+From 8e13b92ce518f16d291f7604309b389d5842c3bc Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Fri, 2 Jun 2023 19:19:31 -0400
-Subject: [PATCH 34/36] Try catch around constrainNitsAndBacklightArrays, and
+Subject: [PATCH 34/37] Try catch around constrainNitsAndBacklightArrays, and
  falls back to dumb curve. It crashes on Xperia 1 IV.
 
 ---
@@ -83,5 +83,5 @@ index 44150f8f..d9ec994e 100644
  
      private Spline loadSdrHdrRatioMap(HighBrightnessMode hbmConfig) {
 -- 
-2.25.1
+2.34.1
 

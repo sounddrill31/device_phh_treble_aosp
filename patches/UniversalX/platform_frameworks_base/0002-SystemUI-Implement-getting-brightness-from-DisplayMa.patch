@@ -1,7 +1,7 @@
-From 907db9f9385c5f69a4e4e7a7a00452b25242fb04 Mon Sep 17 00:00:00 2001
+From de82c1d9eab58af4d40bbe717b9a354395576bbb Mon Sep 17 00:00:00 2001
 From: KrutosVIP <52695559+KrutosVIP@users.noreply.github.com>
 Date: Thu, 16 Feb 2023 15:09:42 +0000
-Subject: [PATCH 38/38] SystemUI: Implement getting brightness from
+Subject: [PATCH 2/2] SystemUI: Implement getting brightness from
  DisplayManager instead of reading values directly from sysfs
 
 ---
@@ -9,7 +9,7 @@ Subject: [PATCH 38/38] SystemUI: Implement getting brightness from
  1 file changed, 14 insertions(+), 9 deletions(-)
 
 diff --git a/packages/SystemUI/src/com/android/systemui/biometrics/UdfpsView.kt b/packages/SystemUI/src/com/android/systemui/biometrics/UdfpsView.kt
-index 5e15250b..dd912861 100644
+index cfd6b03a..c020a407 100644
 --- a/packages/SystemUI/src/com/android/systemui/biometrics/UdfpsView.kt
 +++ b/packages/SystemUI/src/com/android/systemui/biometrics/UdfpsView.kt
 @@ -36,6 +36,8 @@ import com.android.systemui.R
@@ -20,8 +20,8 @@ index 5e15250b..dd912861 100644
 +
  import vendor.goodix.hardware.biometrics.fingerprint.V2_1.IGoodixFingerprintDaemon
  
- private const val TAG = "UdfpsView"
-@@ -241,18 +243,21 @@ Log.d("PHH", "Surface destroyed!")
+ import vendor.xiaomi.hw.touchfeature.V1_0.ITouchFeature
+@@ -253,18 +255,21 @@ Log.d("PHH", "Surface destroyed!")
          mySurfaceView.setVisibility(VISIBLE)
          Log.d("PHH", "setting surface visible!")
  
@@ -53,5 +53,5 @@ index 5e15250b..dd912861 100644
  
          // Assume HBM is max brightness
 -- 
-2.25.1
+2.34.1
 

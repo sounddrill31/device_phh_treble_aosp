@@ -1,7 +1,7 @@
-From ae359fbaed3e92e2da2282574cf820eceb1c5de4 Mon Sep 17 00:00:00 2001
+From 94f48d22a20b6ba1488bce6dd3c338c4508c8ed3 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Tue, 3 Jan 2023 17:59:00 -0500
-Subject: [PATCH 31/36] Always add HIDL fingerprint config (Galaxy A53 is
+Subject: [PATCH 31/37] Always add HIDL fingerprint config (Galaxy A53 is
  missing it on A12 vendor) -- but first enumerate AIDL
 
 ---
@@ -43,5 +43,5 @@ index d55dd8ab..7d537425 100644
                  final IBiometricService biometricService = IBiometricService.Stub.asInterface(
                          ServiceManager.getService(Context.BIOMETRIC_SERVICE));
 -- 
-2.25.1
+2.34.1
 

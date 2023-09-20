@@ -1,7 +1,7 @@
-From b574940a71fd429ae9dccb64acd97a8ffcd65aae Mon Sep 17 00:00:00 2001
+From fcac64c19213731bbd4abf9c8fb59cacdb8502d6 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Fri, 9 Dec 2022 13:57:10 -0500
-Subject: [PATCH 13/17] Let system override adb/secure props, so we dont get
+Subject: [PATCH 13/18] Let system override adb/secure props, so we dont get
  stuck in ro.adb.secure=1 vendors
 
 ---
@@ -22,5 +22,5 @@ index 1ead208..1f58fef 100644
                      } else {
                          it->second = value;
 -- 
-2.25.1
+2.34.1
 

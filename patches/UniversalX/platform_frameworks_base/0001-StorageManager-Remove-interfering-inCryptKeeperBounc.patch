@@ -1,8 +1,7 @@
-From 8ab67a594cf0b1dd47775f46775ee10822a79386 Mon Sep 17 00:00:00 2001
+From 0f30a2f218dd2977ced4bd137bfdc02d75e28630 Mon Sep 17 00:00:00 2001
 From: ItsLynix <lynixthewolf@gmail.com>
 Date: Sat, 31 Dec 2022 14:46:56 +0100
-Subject: [PATCH 37/38] StorageManager: Remove interfering
- inCryptKeeperBounce()
+Subject: [PATCH 1/2] StorageManager: Remove interfering inCryptKeeperBounce()
 
 Interferes with patch 31 frameworks/base of TD patches
 ---
@@ -25,5 +24,5 @@ index cd7e346f..603612e8 100644
       * Is this device file encrypted?
       * @return true for file encrypted. (Implies isEncrypted() == true)
 -- 
-2.25.1
+2.34.1
 

@@ -1,7 +1,7 @@
-From 94d8522b06482a936226db515b5fe25aa75627c4 Mon Sep 17 00:00:00 2001
+From 380973c0001e7d16ad89431f5fd410399b721e38 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Thu, 12 Sep 2019 13:05:37 +0200
-Subject: [PATCH 02/17] If Vboot2 fails, fall-back to Vboot1
+Subject: [PATCH 02/18] If Vboot2 fails, fall-back to Vboot1
 
 Some devices, for instance Honor View 10, running Pie vendor declares
 vbmeta in their device-tree, but doesn't have a vbmeta partition.
@@ -42,5 +42,5 @@ index 50a92c8..ba9fbea 100644
  
  void SetInitAvbVersionInRecovery() {
 -- 
-2.25.1
+2.34.1
 

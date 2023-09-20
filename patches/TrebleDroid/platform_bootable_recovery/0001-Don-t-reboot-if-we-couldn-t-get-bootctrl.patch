@@ -1,4 +1,4 @@
-From cb546f2cb679232881eba40ab206b113f5bed1b4 Mon Sep 17 00:00:00 2001
+From 093513b1e8aee90d6d5a28eb2f7ac71c5b83d3b0 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Thu, 12 Sep 2019 20:31:07 +0200
 Subject: [PATCH] Don't reboot if we couldn't get bootctrl
@@ -22,5 +22,5 @@ index 88fcfa5..097a2c4 100644
  
    uint32_t current_slot = module->getCurrentSlot();
 -- 
-2.25.1
+2.34.1
 

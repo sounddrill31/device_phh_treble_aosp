@@ -1,4 +1,4 @@
-From bf35cecd4968982907f5acb6b2688286554c5422 Mon Sep 17 00:00:00 2001
+From e9c2214492c53d35775dd1caa7b9bd6cb6860b0e Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Wed, 26 Oct 2022 18:02:18 -0400
 Subject: [PATCH] Restore back the behavior of isValid(): It is legal to have
@@ -39,5 +39,5 @@ index 2bee2ee..9e8a783 100644
  
      BpfMap<Key, Value>(bpf_map_type map_type, uint32_t max_entries, uint32_t map_flags = 0) {
 -- 
-2.25.1
+2.34.1
 

@@ -1,7 +1,7 @@
-From 12641e88d1fc0c7ac5a268df19a47b17256ec52c Mon Sep 17 00:00:00 2001
+From 8ac39272f7de7ec1a69b56bbe35c7b1f6d353fe9 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Tue, 14 Aug 2018 19:33:03 +0200
-Subject: [PATCH 06/17] Detect allowed sdcard options based on vndk
+Subject: [PATCH 06/18] Detect allowed sdcard options based on vndk
 
 Some kernel crashes when using too recent sdcardfs options
 
@@ -39,5 +39,5 @@ index 622de5b..e580190 100644
      // handle older kernels that aren't updated yet.
      for (int i = 0; i <= new_opts_list.size(); ++i) {
 -- 
-2.25.1
+2.34.1
 

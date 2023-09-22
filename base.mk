@@ -254,7 +254,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
        slsi-booted
-
-# Two-pane layout in Settings
-PRODUCT_PACKAGES += \
-    androidx.window.extensions

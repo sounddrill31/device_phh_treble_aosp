@@ -5,8 +5,8 @@ $(call inherit-product, device/phh/treble/base.mk)
 # Use Scudo instead of Jemalloc
 # PRODUCT_USE_SCUDO := true
 
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-
+# $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/arrow/config/common.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
 

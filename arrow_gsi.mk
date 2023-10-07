@@ -34,3 +34,5 @@ TARGET_BUILD_APERTURE_CAMERA := true
 ifeq ($(WITH_GMS),true)
 GMS_MAKEFILE=gms_minimal.mk
 endif
+# GSI
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true 

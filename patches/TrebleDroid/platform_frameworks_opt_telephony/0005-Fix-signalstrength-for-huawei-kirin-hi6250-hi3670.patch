@@ -1,4 +1,4 @@
-From b99162b8ec2276d57e6077fed507faff48556d52 Mon Sep 17 00:00:00 2001
+From fb1e272126ce82f60a3104d858007c10a33f4f3e Mon Sep 17 00:00:00 2001
 From: Raphael Mounier <mounierr07@gmail.com>
 Date: Thu, 6 Oct 2022 08:35:38 +0200
 Subject: [PATCH 05/10] Fix signalstrength for huawei kirin (hi6250, hi3670)
@@ -21,7 +21,7 @@ Change-Id: I4409683dc7cd9b870237a2939188b71ce94a9fc7
  2 files changed, 134 insertions(+), 4 deletions(-)
 
 diff --git a/src/java/com/android/internal/telephony/RIL.java b/src/java/com/android/internal/telephony/RIL.java
-index 5ecdfcbbd4..0b2e848bcf 100644
+index 5ecdfcb..0b2e848 100644
 --- a/src/java/com/android/internal/telephony/RIL.java
 +++ b/src/java/com/android/internal/telephony/RIL.java
 @@ -6919,6 +6919,124 @@ public class RIL extends BaseCommands implements CommandsInterface {
@@ -150,7 +150,7 @@ index 5ecdfcbbd4..0b2e848bcf 100644
          mLastBarringInfo = barringInfo;
          mBarringInfoChangedRegistrants.notifyRegistrants(new AsyncResult(null, barringInfo, null));
 diff --git a/src/java/com/android/internal/telephony/RadioIndication.java b/src/java/com/android/internal/telephony/RadioIndication.java
-index 4f75412ad9..42a4f73da3 100644
+index 4f75412..42a4f73 100644
 --- a/src/java/com/android/internal/telephony/RadioIndication.java
 +++ b/src/java/com/android/internal/telephony/RadioIndication.java
 @@ -241,13 +241,25 @@ public class RadioIndication extends IRadioIndication.Stub {

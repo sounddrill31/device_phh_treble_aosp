@@ -1,4 +1,4 @@
-From 680c56c8f392a0d1644536db5430d96f28b5977a Mon Sep 17 00:00:00 2001
+From 84076d73fbdc7b0eff49e496d5309b0303460041 Mon Sep 17 00:00:00 2001
 From: ironydelerium <42721860+ironydelerium@users.noreply.github.com>
 Date: Fri, 31 Dec 2021 02:20:28 -0800
 Subject: [PATCH 04/10] Reintroduce 'public void
@@ -18,7 +18,7 @@ Co-authored-by: Sarah Vandomelen <sarah@sightworks.com>
  1 file changed, 13 insertions(+)
 
 diff --git a/src/java/com/android/internal/telephony/metrics/TelephonyMetrics.java b/src/java/com/android/internal/telephony/metrics/TelephonyMetrics.java
-index 3fdbfe0ed7..fb8011c3df 100644
+index 3fdbfe0..fb8011c 100644
 --- a/src/java/com/android/internal/telephony/metrics/TelephonyMetrics.java
 +++ b/src/java/com/android/internal/telephony/metrics/TelephonyMetrics.java
 @@ -2320,6 +2320,19 @@ public class TelephonyMetrics {

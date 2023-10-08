@@ -1,4 +1,4 @@
-From ec516d3b4ccc546d4fd81135e1b05b29b1d7364c Mon Sep 17 00:00:00 2001
+From 83702b1a999615b4f2b98bdca194cb60d9b733e2 Mon Sep 17 00:00:00 2001
 From: corneranchu <corneranchu@gmail.com>
 Date: Sat, 1 Oct 2022 01:49:58 +0000
 Subject: [PATCH 06/10] telephony: forward-port support for forceCognitive
@@ -13,7 +13,7 @@ Change-Id: I7dd387a9f064a969ca5774e53b05388de12aa308
  1 file changed, 3 insertions(+), 1 deletion(-)
 
 diff --git a/src/java/com/android/internal/telephony/RadioDataProxy.java b/src/java/com/android/internal/telephony/RadioDataProxy.java
-index 9671077b0f..561fceaa7d 100644
+index 9671077..561fcea 100644
 --- a/src/java/com/android/internal/telephony/RadioDataProxy.java
 +++ b/src/java/com/android/internal/telephony/RadioDataProxy.java
 @@ -21,6 +21,7 @@ import android.net.LinkProperties;

@@ -1,4 +1,4 @@
-From 5a8bb726afdd79bb5af54a7f4b77d8f3218aff2c Mon Sep 17 00:00:00 2001
+From 13786756e0d769a7dc6f3ffa06774ad6061f159c Mon Sep 17 00:00:00 2001
 From: Peter Cai <peter@typeblog.net>
 Date: Mon, 5 Sep 2022 14:02:37 -0400
 Subject: [PATCH 01/10] SubscriptionController: Do not override default calling
@@ -18,7 +18,7 @@ Change-Id: Iccab64e9b3b3ab4773bd8944d47c2006f229d472
  1 file changed, 17 insertions(+), 1 deletion(-)
 
 diff --git a/src/java/com/android/internal/telephony/subscription/SubscriptionManagerService.java b/src/java/com/android/internal/telephony/subscription/SubscriptionManagerService.java
-index 8e773c072d..1efe9ba3b4 100644
+index 8e773c0..1efe9ba 100644
 --- a/src/java/com/android/internal/telephony/subscription/SubscriptionManagerService.java
 +++ b/src/java/com/android/internal/telephony/subscription/SubscriptionManagerService.java
 @@ -78,6 +78,7 @@ import android.util.Base64;

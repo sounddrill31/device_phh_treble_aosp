@@ -1,4 +1,4 @@
-From bae1872b676d621ac508e29b81dad759d54224e7 Mon Sep 17 00:00:00 2001
+From 1a1e7b1cb8bb7bc16cad6c76a947df711e34f3b2 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Wed, 10 May 2023 11:28:27 -0400
 Subject: [PATCH 32/37] bootanimation: Fix bootanimation when using mask+shine
@@ -12,7 +12,7 @@ Fixes: e27e0e177fe88584a280e0f7f624c249623efea1
  1 file changed, 20 insertions(+), 18 deletions(-)
 
 diff --git a/cmds/bootanimation/BootAnimation.cpp b/cmds/bootanimation/BootAnimation.cpp
-index 6cd0e21d0dc5..9c50e954cee5 100644
+index 6cd0e21d..9c50e954 100644
 --- a/cmds/bootanimation/BootAnimation.cpp
 +++ b/cmds/bootanimation/BootAnimation.cpp
 @@ -605,24 +605,26 @@ status_t BootAnimation::readyToRun() {

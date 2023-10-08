@@ -1,4 +1,4 @@
-From 3387f440fdc781acda9ffb9e0edcd9ddc7d8c7ec Mon Sep 17 00:00:00 2001
+From 887a9b5d00eecb1615fea4d60dd2203a0dab452e Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Thu, 15 Dec 2022 15:54:50 -0500
 Subject: [PATCH 31/37] Fixup of c50777 -- original commit only cares about R
@@ -9,7 +9,7 @@ Subject: [PATCH 31/37] Fixup of c50777 -- original commit only cares about R
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/services/core/java/com/android/server/biometrics/AuthService.java b/services/core/java/com/android/server/biometrics/AuthService.java
-index a121579f40d8..bc741a5e2396 100644
+index a121579f..bc741a5e 100644
 --- a/services/core/java/com/android/server/biometrics/AuthService.java
 +++ b/services/core/java/com/android/server/biometrics/AuthService.java
 @@ -653,7 +653,7 @@ public class AuthService extends SystemService {

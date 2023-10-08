@@ -1,4 +1,4 @@
-From 4832d00f87a4d88386bc790973227312a1be6f8c Mon Sep 17 00:00:00 2001
+From e3f97b401343cd253be6d62314d49ed7c378b6c1 Mon Sep 17 00:00:00 2001
 From: LuK1337 <priv.luk@gmail.com>
 Date: Fri, 21 Oct 2022 20:55:05 +0200
 Subject: [PATCH 07/10] Pass correct value to setPreferredNetworkType() for RIL
@@ -11,7 +11,7 @@ Change-Id: Id14be66a2ea4e85b6504bc03fd7d2f038185c17d
  2 files changed, 5 insertions(+), 3 deletions(-)
 
 diff --git a/src/java/com/android/internal/telephony/RIL.java b/src/java/com/android/internal/telephony/RIL.java
-index 0b2e848bcf..f4447e356b 100644
+index 0b2e848..f4447e3 100644
 --- a/src/java/com/android/internal/telephony/RIL.java
 +++ b/src/java/com/android/internal/telephony/RIL.java
 @@ -3027,7 +3027,8 @@ public class RIL extends BaseCommands implements CommandsInterface {
@@ -25,7 +25,7 @@ index 0b2e848bcf..f4447e356b 100644
                  handleRadioProxyExceptionForRR(HAL_SERVICE_NETWORK, "setPreferredNetworkType", e);
              }
 diff --git a/src/java/com/android/internal/telephony/RadioNetworkProxy.java b/src/java/com/android/internal/telephony/RadioNetworkProxy.java
-index 246c2e0204..2e352a96b4 100644
+index 246c2e0..2e352a9 100644
 --- a/src/java/com/android/internal/telephony/RadioNetworkProxy.java
 +++ b/src/java/com/android/internal/telephony/RadioNetworkProxy.java
 @@ -389,16 +389,17 @@ public class RadioNetworkProxy extends RadioServiceProxy {

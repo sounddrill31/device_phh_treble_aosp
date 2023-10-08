@@ -1,4 +1,4 @@
-From ff326f79f51d6aa1563ef1621a63eeb8f871882c Mon Sep 17 00:00:00 2001
+From d6e88fbd73f5e57af48b60008eb3a8d2f897fec5 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sun, 30 Jan 2022 07:40:19 -0500
 Subject: [PATCH 20/28] Fix parsing audio hal 7.0 audio policies
@@ -12,7 +12,7 @@ Change-Id: I458b8b6a6498dd9cf748e00843ff65c561579902
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp b/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp
-index 65fa8f12f6..901ef61502 100644
+index 65fa8f1..901ef61 100644
 --- a/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp
 +++ b/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp
 @@ -428,7 +428,7 @@ PolicySerializer::deserialize<AudioProfileTraits>(

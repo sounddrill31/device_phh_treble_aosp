@@ -1,4 +1,4 @@
-From 73fa657ca056ef1ab283e081baf2cc06240d3054 Mon Sep 17 00:00:00 2001
+From a5f86f11f966c430c5e6502d549293a23023633f Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sun, 28 May 2023 16:46:46 -0400
 Subject: [PATCH 4/4] Add some properties to fake in "keymaster" prop
@@ -10,7 +10,7 @@ Subject: [PATCH 4/4] Add some properties to fake in "keymaster" prop
  1 file changed, 6 insertions(+)
 
 diff --git a/libc/system_properties/system_properties.cpp b/libc/system_properties/system_properties.cpp
-index 40ff48bad..057199318 100644
+index 40ff48b..0571993 100644
 --- a/libc/system_properties/system_properties.cpp
 +++ b/libc/system_properties/system_properties.cpp
 @@ -121,6 +121,12 @@ static const char* redirectToProp(const char *name) {
@@ -27,5 +27,5 @@ index 40ff48bad..057199318 100644
    return name;
  }
 -- 
-2.25.1
+2.34.1
 

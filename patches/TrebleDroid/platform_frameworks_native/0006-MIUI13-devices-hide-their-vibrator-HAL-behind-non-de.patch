@@ -1,4 +1,4 @@
-From e806efed511514851b595fc5ddf6f0963923261e Mon Sep 17 00:00:00 2001
+From ff8d96b4a1f7555b677b42950fb11c518f2e8f63 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Fri, 25 Mar 2022 05:37:56 -0400
 Subject: [PATCH 6/6] MIUI13 devices hide their vibrator HAL behind non-default
@@ -9,7 +9,7 @@ Subject: [PATCH 6/6] MIUI13 devices hide their vibrator HAL behind non-default
  1 file changed, 6 insertions(+)
 
 diff --git a/services/vibratorservice/VibratorHalController.cpp b/services/vibratorservice/VibratorHalController.cpp
-index c1795f5c32..345016efd6 100644
+index c1795f5..345016e 100644
 --- a/services/vibratorservice/VibratorHalController.cpp
 +++ b/services/vibratorservice/VibratorHalController.cpp
 @@ -59,6 +59,12 @@ std::shared_ptr<HalWrapper> connectHal(std::shared_ptr<CallbackScheduler> schedu

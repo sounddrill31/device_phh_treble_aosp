@@ -1,4 +1,4 @@
-From 0befafa821f682684db9f0ff795a92344442f17d Mon Sep 17 00:00:00 2001
+From 9f0ca8d68868b23920a85bab9a1181770f187142 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sat, 16 Apr 2022 14:30:14 -0400
 Subject: [PATCH 22/28] Add a prop to change Samsung flash strength
@@ -9,7 +9,7 @@ Subject: [PATCH 22/28] Add a prop to change Samsung flash strength
  2 files changed, 14 insertions(+), 1 deletion(-)
 
 diff --git a/services/camera/libcameraservice/Android.bp b/services/camera/libcameraservice/Android.bp
-index 3136bbd30f..472a82e4aa 100644
+index 3136bbd..472a82e 100644
 --- a/services/camera/libcameraservice/Android.bp
 +++ b/services/camera/libcameraservice/Android.bp
 @@ -177,6 +177,7 @@ cc_library_shared {
@@ -21,7 +21,7 @@ index 3136bbd30f..472a82e4aa 100644
      ],
  
 diff --git a/services/camera/libcameraservice/common/hidl/HidlProviderInfo.cpp b/services/camera/libcameraservice/common/hidl/HidlProviderInfo.cpp
-index 587d3eeda7..e1e876a7d5 100644
+index 587d3ee..e1e876a 100644
 --- a/services/camera/libcameraservice/common/hidl/HidlProviderInfo.cpp
 +++ b/services/camera/libcameraservice/common/hidl/HidlProviderInfo.cpp
 @@ -29,6 +29,7 @@

@@ -1,4 +1,4 @@
-From 5d2b2966b8bd4537ec695272ce84e7e52e5d751b Mon Sep 17 00:00:00 2001
+From 1ef6e12399be69436251fc8b76a77ae193d0a468 Mon Sep 17 00:00:00 2001
 From: Andy CrossGate Yan <GeForce8800Ultra@gmail.com>
 Date: Wed, 19 Oct 2022 02:20:05 +0000
 Subject: [PATCH 2/2] Revert "detect inability to write to index != 0 of bpf
@@ -6,18 +6,17 @@ Subject: [PATCH 2/2] Revert "detect inability to write to index != 0 of bpf
 
 This reverts commit ead9d83423877458023056f6ccf9390950d6726f.
 ---
- bpfloader/BpfLoader.cpp | 11 +----------
- 1 file changed, 1 insertion(+), 10 deletions(-)
+ bpfloader/BpfLoader.cpp | 9 ---------
+ 1 file changed, 9 deletions(-)
 
 diff --git a/bpfloader/BpfLoader.cpp b/bpfloader/BpfLoader.cpp
-index 29fd7f8..5e76edb 100644
+index 29fd7f8..b709b91 100644
 --- a/bpfloader/BpfLoader.cpp
 +++ b/bpfloader/BpfLoader.cpp
-@@ -306,16 +306,7 @@ int main(int argc, char** argv) {
- 	    return 0;
+@@ -307,15 +307,6 @@ int main(int argc, char** argv) {
          }
      }
--
+ 
 -    int key = 1;
 -    int value = 123;
 -    android::base::unique_fd map(
@@ -27,7 +26,6 @@ index 29fd7f8..5e76edb 100644
 -        return 1;
 -    }
 -
-+
      if (android::base::SetProperty("bpf.progs_loaded", "1") == false) {
          ALOGE("Failed to set bpf.progs_loaded property");
          return 1;

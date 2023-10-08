@@ -1,4 +1,4 @@
-From eb87a9c2608d6f9989d822e22e5afbfe9d6f9345 Mon Sep 17 00:00:00 2001
+From 049062a14e4a2d69f35cd4aa715fc7a7fb5143fe Mon Sep 17 00:00:00 2001
 From: Alberto Ponces <ponces26@gmail.com>
 Date: Thu, 17 Jun 2021 15:48:53 +0100
 Subject: [PATCH 3/7] Add option to change eSCO Transport Unit Size
@@ -15,7 +15,7 @@ Change-Id: I3e5897c2ce983042b9a4bef9def6744ba4253bcb
  1 file changed, 7 insertions(+), 1 deletion(-)
 
 diff --git a/system/device/src/esco_parameters.cc b/system/device/src/esco_parameters.cc
-index 48607e6d54..3b19d7c3ea 100644
+index 48607e6..3b19d7c 100644
 --- a/system/device/src/esco_parameters.cc
 +++ b/system/device/src/esco_parameters.cc
 @@ -22,7 +22,8 @@

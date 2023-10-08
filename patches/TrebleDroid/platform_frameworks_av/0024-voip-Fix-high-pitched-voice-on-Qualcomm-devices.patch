@@ -1,4 +1,4 @@
-From 8a28441d13948d2be0786d5c65ebfa02aaba5d26 Mon Sep 17 00:00:00 2001
+From d465d86bc67a8ef05f896d1358097cca059090c6 Mon Sep 17 00:00:00 2001
 From: ponces <ponces26@gmail.com>
 Date: Mon, 24 Oct 2022 09:38:34 +0100
 Subject: [PATCH 24/28] voip: Fix high pitched voice on Qualcomm devices
@@ -8,7 +8,7 @@ Subject: [PATCH 24/28] voip: Fix high pitched voice on Qualcomm devices
  1 file changed, 9 insertions(+)
 
 diff --git a/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp b/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp
-index d2fcc13b00..fc6cc72c1c 100644
+index d2fcc13..fc6cc72 100644
 --- a/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp
 +++ b/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp
 @@ -252,6 +252,7 @@ private:

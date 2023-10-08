@@ -1,4 +1,4 @@
-From 0803f80e38d2c053971ea87ddb17d0671002e2aa Mon Sep 17 00:00:00 2001
+From 64dacc6e6b3cc2d28c937ca706b30fb3f17fa76f Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sat, 20 Mar 2021 14:31:01 +0100
 Subject: [PATCH 21/37] Automatically detect pick up sensor, so that an overlay
@@ -9,7 +9,7 @@ Subject: [PATCH 21/37] Automatically detect pick up sensor, so that an overlay
  1 file changed, 17 insertions(+), 2 deletions(-)
 
 diff --git a/core/java/android/hardware/display/AmbientDisplayConfiguration.java b/core/java/android/hardware/display/AmbientDisplayConfiguration.java
-index 47541ca16cda..28168b9208f5 100644
+index 47541ca1..28168b92 100644
 --- a/core/java/android/hardware/display/AmbientDisplayConfiguration.java
 +++ b/core/java/android/hardware/display/AmbientDisplayConfiguration.java
 @@ -25,6 +25,9 @@ import android.text.TextUtils;

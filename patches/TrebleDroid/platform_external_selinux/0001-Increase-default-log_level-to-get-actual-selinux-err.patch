@@ -1,4 +1,4 @@
-From f819367feeadefb42df2377ad6c74e3a1c78ec9b Mon Sep 17 00:00:00 2001
+From e0e9d76fcf951c9ac7a7622070efbe2c79d3d310 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Mon, 9 Apr 2018 00:19:49 +0200
 Subject: [PATCH 1/9] Increase default log_level to get actual selinux error in
@@ -9,7 +9,7 @@ Subject: [PATCH 1/9] Increase default log_level to get actual selinux error in
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/secilc/secilc.c b/secilc/secilc.c
-index 80d3583d..a51630b2 100644
+index 80d3583..a51630b 100644
 --- a/secilc/secilc.c
 +++ b/secilc/secilc.c
 @@ -107,7 +107,7 @@ int main(int argc, char *argv[])

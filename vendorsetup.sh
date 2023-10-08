@@ -49,4 +49,4 @@ rm -rf packages/apps/QcRilAm
 git clone https://github.com/AndyCGYan/android_packages_apps_QcRilAm packages/apps/QcRilAm -b master --depth 1
 
 apply "TrebleDroid"
-apply "UniversalX"
+#apply "UniversalX"

@@ -1,4 +1,4 @@
-From 69e75b8ecb11ccf33b13d4ae0ca49c5d32e4bc49 Mon Sep 17 00:00:00 2001
+From 177f94ed89ef93014d750920a93247c053ec8e59 Mon Sep 17 00:00:00 2001
 From: ironydelerium <42721860+ironydelerium@users.noreply.github.com>
 Date: Fri, 31 Dec 2021 02:20:28 -0800
 Subject: [PATCH 4/9] Reintroduce 'public void
@@ -18,7 +18,7 @@ Co-authored-by: Sarah Vandomelen <sarah@sightworks.com>
  1 file changed, 13 insertions(+)
 
 diff --git a/src/java/com/android/internal/telephony/metrics/TelephonyMetrics.java b/src/java/com/android/internal/telephony/metrics/TelephonyMetrics.java
-index 3fdbfe0ed7..fb8011c3df 100644
+index 3fdbfe0..fb8011c 100644
 --- a/src/java/com/android/internal/telephony/metrics/TelephonyMetrics.java
 +++ b/src/java/com/android/internal/telephony/metrics/TelephonyMetrics.java
 @@ -2320,6 +2320,19 @@ public class TelephonyMetrics {
@@ -42,5 +42,5 @@ index 3fdbfe0ed7..fb8011c3df 100644
       * Write Send SMS event using ImsService. Expecting response from
       * {@link #writeOnSmsSolicitedResponse}.
 -- 
-2.34.1
+2.42.0
 

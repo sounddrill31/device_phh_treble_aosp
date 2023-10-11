@@ -1,4 +1,4 @@
-From 5e102101733669fa99ed8a53f2053f8576d917d8 Mon Sep 17 00:00:00 2001
+From 2346f85d3cc9acd2aff27162a2d32089c04c9965 Mon Sep 17 00:00:00 2001
 From: Alberto Ponces <ponces26@gmail.com>
 Date: Mon, 18 Oct 2021 17:20:18 +0100
 Subject: [PATCH 2/5] build: Bypass vendor calls
@@ -9,7 +9,7 @@ Change-Id: I69830d6264356dadd7b037553a899a4eb3d211f1
  1 file changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/target/product/aosp_arm64.mk b/target/product/aosp_arm64.mk
-index 6c907db0ed..0adced1672 100644
+index 6c907db..0adced1 100644
 --- a/target/product/aosp_arm64.mk
 +++ b/target/product/aosp_arm64.mk
 @@ -54,9 +54,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
@@ -26,5 +26,5 @@ index 6c907db0ed..0adced1672 100644
  #
  # Special settings for GSI releasing
 -- 
-2.34.1
+2.42.0
 

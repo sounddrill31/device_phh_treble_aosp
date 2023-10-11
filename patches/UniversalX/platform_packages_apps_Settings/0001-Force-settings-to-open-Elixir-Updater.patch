@@ -1,0 +1,69 @@
+From 06603e6732ee13e7c301679ab1bb8476f5bc0f1f Mon Sep 17 00:00:00 2001
+From: KrutosVIP <52695559+KrutosVIP@users.noreply.github.com>
+Date: Fri, 10 Mar 2023 09:26:42 +0100
+Subject: [PATCH] Force settings to open Elixir Updater
+
+---
+ res/xml/system_dashboard_fragment.xml            |  4 +++-
+ .../system/SystemUpdatePreferenceController.java | 16 ++++++++++++----
+ 2 files changed, 15 insertions(+), 5 deletions(-)
+
+diff --git a/res/xml/system_dashboard_fragment.xml b/res/xml/system_dashboard_fragment.xml
+index 06ba87d..a90511a 100644
+--- a/res/xml/system_dashboard_fragment.xml
++++ b/res/xml/system_dashboard_fragment.xml
+@@ -97,7 +97,9 @@
+         android:order="10"
+         settings:keywords="@string/keywords_system_update_settings"
+         settings:controller="com.android.settings.system.SystemUpdatePreferenceController">
+-        <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS"/>
++        <intent android:action="android.intent.action.MAIN"
++                android:targetPackage="com.elixer.updater"
++                android:targetClass="com.elixer.updater.MainActivity" />
+     </Preference>
+ 
+ </PreferenceScreen>
+diff --git a/src/com/android/settings/system/SystemUpdatePreferenceController.java b/src/com/android/settings/system/SystemUpdatePreferenceController.java
+index b2a22ff..6642f02 100644
+--- a/src/com/android/settings/system/SystemUpdatePreferenceController.java
++++ b/src/com/android/settings/system/SystemUpdatePreferenceController.java
+@@ -19,6 +19,7 @@ import static android.content.Context.CARRIER_CONFIG_SERVICE;
+ import static android.content.Context.SYSTEM_UPDATE_SERVICE;
+ 
+ import android.content.Context;
++import android.content.pm.PackageManager;
+ import android.content.Intent;
+ import android.os.Build;
+ import android.os.Bundle;
+@@ -44,6 +45,7 @@ public class SystemUpdatePreferenceController extends BasePreferenceController {
+     private static final String TAG = "SysUpdatePrefContr";
+ 
+     private static final String KEY_SYSTEM_UPDATE_SETTINGS = "system_update_settings";
++    private static final String OTA_PACKAGE = "com.elixer.updater";
+ 
+     private final UserManager mUm;
+     private final SystemUpdateManager mUpdateManager;
+@@ -56,10 +58,16 @@ public class SystemUpdatePreferenceController extends BasePreferenceController {
+ 
+     @Override
+     public int getAvailabilityStatus() {
+-        return mContext.getResources().getBoolean(R.bool.config_show_system_update_settings)
+-                && mUm.isAdminUser()
+-                ? AVAILABLE
+-                : UNSUPPORTED_ON_DEVICE;
++        if (!mUm.isAdminUser()) {
++            return UNSUPPORTED_ON_DEVICE;
++        }
++        try {
++            PackageManager pm = mContext.getPackageManager();
++            pm.getPackageInfo(OTA_PACKAGE, PackageManager.GET_ACTIVITIES);
++        } catch (Exception e) {
++            return UNSUPPORTED_ON_DEVICE;
++        }
++        return AVAILABLE;
+     }
+ 
+     @Override
+-- 
+2.42.0
+

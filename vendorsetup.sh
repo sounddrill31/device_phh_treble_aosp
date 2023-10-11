@@ -48,5 +48,8 @@ git clone https://github.com/phhusson/vendor_lptools vendor/lptools -b master --
 rm -rf packages/apps/QcRilAm
 git clone https://github.com/AndyCGYan/android_packages_apps_QcRilAm packages/apps/QcRilAm -b master --depth 1
 
+rm -rf prebuilts/vndk/v28
+git clone https://android.googlesource.com/platform/prebuilts/vndk/v28 -b 204f1bad00aaf480ba33233f7b8c2ddaa03155dd ./prebuilts/vndk/v28 --depth 1
+
 apply "TrebleDroid"
 #apply "UniversalX"

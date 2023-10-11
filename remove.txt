@@ -3,3 +3,4 @@ vendor/vndk-tests
 vendor/interfaces
 vendor/lptools
 packages/apps/QcRilAm
+prebuilts/vndk/v28

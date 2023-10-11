@@ -1,7 +1,7 @@
-From ff4de661aecd8e5a24965b5830f26a292783139f Mon Sep 17 00:00:00 2001
+From a8464a6ddab237f3b1e8fc11d1ad0caaf2737b4b Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sat, 2 Apr 2022 18:04:01 -0400
-Subject: [PATCH 25/37] Allow disabling of fingerprint cleanups, needed on some
+Subject: [PATCH 25/39] Allow disabling of fingerprint cleanups, needed on some
  Realme devices that cant enumerate
 
 ---
@@ -9,7 +9,7 @@ Subject: [PATCH 25/37] Allow disabling of fingerprint cleanups, needed on some
  1 file changed, 2 insertions(+)
 
 diff --git a/services/core/java/com/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21.java b/services/core/java/com/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21.java
-index 9e6f4e4f..bda57a81 100644
+index 9e6f4e4f13f3..bda57a8150b9 100644
 --- a/services/core/java/com/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21.java
 +++ b/services/core/java/com/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21.java
 @@ -739,6 +739,8 @@ public class Fingerprint21 implements IHwBinder.DeathRecipient, ServiceProvider

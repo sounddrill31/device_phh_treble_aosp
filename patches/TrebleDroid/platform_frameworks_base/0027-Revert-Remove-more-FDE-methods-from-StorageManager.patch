@@ -1,7 +1,7 @@
-From 6db13727a1a72f523a3a8acf1bde2989c4286438 Mon Sep 17 00:00:00 2001
+From dbe19e9eef67309210e38cb8c82dde7207af0f43 Mon Sep 17 00:00:00 2001
 From: Andy CrossGate Yan <GeForce8800Ultra@gmail.com>
 Date: Sat, 15 Oct 2022 09:33:56 +0000
-Subject: [PATCH 27/37] Revert "Remove more FDE methods from StorageManager"
+Subject: [PATCH 27/39] Revert "Remove more FDE methods from StorageManager"
 
 This reverts commit bd13f84152449a3ead6fa8604fd31f48c0224676.
 
@@ -12,7 +12,7 @@ Change-Id: Ic394934ec27b1a486c60123130825d44dad73412
  2 files changed, 61 insertions(+)
 
 diff --git a/core/java/android/os/storage/StorageManager.java b/core/java/android/os/storage/StorageManager.java
-index 80dd4882..cb4769ff 100644
+index 80dd48825ba7..cb4769ff4ec3 100644
 --- a/core/java/android/os/storage/StorageManager.java
 +++ b/core/java/android/os/storage/StorageManager.java
 @@ -1660,6 +1660,15 @@ public class StorageManager {
@@ -87,7 +87,7 @@ index 80dd4882..cb4769ff 100644
       * @deprecated Use {@link #isFileEncrypted} instead, since emulated FBE is no longer supported.
       */
 diff --git a/core/java/com/android/internal/os/RoSystemProperties.java b/core/java/com/android/internal/os/RoSystemProperties.java
-index 40d5c476..66288706 100644
+index 40d5c4761dff..66288706b0f1 100644
 --- a/core/java/com/android/internal/os/RoSystemProperties.java
 +++ b/core/java/com/android/internal/os/RoSystemProperties.java
 @@ -68,10 +68,14 @@ public class RoSystemProperties {

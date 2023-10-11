@@ -1,4 +1,4 @@
-From 354fed68320101f15729da72e387797a3fbe3c33 Mon Sep 17 00:00:00 2001
+From 48a72e00b21af330793d9c9f3ac2c4f4c3820e71 Mon Sep 17 00:00:00 2001
 From: Andreas Schneider <asn@cryptomilk.org>
 Date: Sat, 12 Nov 2022 00:35:46 +0000
 Subject: [PATCH 5/7] On Samsung devices, we need to tell Audio HAL if we're
@@ -12,7 +12,7 @@ Change-Id: I7802b7a29c017a2cd7018e82772183df1dfa0b89
  1 file changed, 8 insertions(+)
 
 diff --git a/android/app/src/com/android/bluetooth/hfp/HeadsetStateMachine.java b/android/app/src/com/android/bluetooth/hfp/HeadsetStateMachine.java
-index 57eb9af..fbe2941 100644
+index 57eb9aff4c..fbe29415b8 100644
 --- a/android/app/src/com/android/bluetooth/hfp/HeadsetStateMachine.java
 +++ b/android/app/src/com/android/bluetooth/hfp/HeadsetStateMachine.java
 @@ -151,6 +151,7 @@ public class HeadsetStateMachine extends StateMachine {

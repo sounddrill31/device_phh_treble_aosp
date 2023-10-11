@@ -1,7 +1,7 @@
-From 4890501bbea8f7ad25fbdea888dbe28488229081 Mon Sep 17 00:00:00 2001
+From 0bcbe26b1b9f3592267db114af6cdcfbcc71e221 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sat, 24 Mar 2018 08:01:48 +0100
-Subject: [PATCH 23/37] backlight: Fix backlight control on Galaxy S9(+)
+Subject: [PATCH 23/39] backlight: Fix backlight control on Galaxy S9(+)
 
 Change-Id: I1fbbb47939c377597ef8ad6b88b2acea5f4acaa6
 
@@ -53,7 +53,7 @@ Change-Id: I4e85178327d2bb63d5d0a37786058843662a89ba
  1 file changed, 46 insertions(+)
 
 diff --git a/services/core/java/com/android/server/lights/LightsService.java b/services/core/java/com/android/server/lights/LightsService.java
-index 91f14de0..8fa9c4f3 100644
+index 91f14de040fe..8fa9c4f3a698 100644
 --- a/services/core/java/com/android/server/lights/LightsService.java
 +++ b/services/core/java/com/android/server/lights/LightsService.java
 @@ -31,6 +31,7 @@ import android.os.IBinder;

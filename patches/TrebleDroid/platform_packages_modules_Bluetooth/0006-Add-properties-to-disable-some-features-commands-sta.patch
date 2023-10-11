@@ -1,4 +1,4 @@
-From e2ca2171577c4cc0a3b82d7df5363dc3170380e9 Mon Sep 17 00:00:00 2001
+From 38fde0e3896c88ee18150a56d8f984a97e70a393 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sat, 27 May 2023 06:41:32 -0400
 Subject: [PATCH 6/7] Add properties to disable some features/commands/states
@@ -9,7 +9,7 @@ Subject: [PATCH 6/7] Add properties to disable some features/commands/states
  1 file changed, 68 insertions(+), 4 deletions(-)
 
 diff --git a/system/gd/hci/controller.cc b/system/gd/hci/controller.cc
-index c08ecab..66b7de6 100644
+index c08ecab9d5..66b7de6b5e 100644
 --- a/system/gd/hci/controller.cc
 +++ b/system/gd/hci/controller.cc
 @@ -16,6 +16,7 @@

@@ -1,14 +1,14 @@
-From bb57d3b57f2a2b3bcc43a17cacec2a1651a20f6a Mon Sep 17 00:00:00 2001
+From 2348038ffbe8071c7db1e37d3aaa7d78852994af Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Mon, 6 Aug 2018 12:49:00 +0200
-Subject: [PATCH 07/37] Show APN Settings for CDMA carriers
+Subject: [PATCH 07/39] Show APN Settings for CDMA carriers
 
 ---
  telephony/java/android/telephony/CarrierConfigManager.java | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/telephony/java/android/telephony/CarrierConfigManager.java b/telephony/java/android/telephony/CarrierConfigManager.java
-index 5b1c6b1c..f38d900d 100644
+index 5b1c6b1c88b8..f38d900d3b58 100644
 --- a/telephony/java/android/telephony/CarrierConfigManager.java
 +++ b/telephony/java/android/telephony/CarrierConfigManager.java
 @@ -9823,7 +9823,7 @@ public class CarrierConfigManager {

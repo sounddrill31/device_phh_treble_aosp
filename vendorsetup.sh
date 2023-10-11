@@ -49,7 +49,9 @@ rm -rf packages/apps/QcRilAm
 git clone https://github.com/AndyCGYan/android_packages_apps_QcRilAm packages/apps/QcRilAm -b master --depth 1
 
 rm -rf prebuilts/vndk/v28
-git clone https://android.googlesource.com/platform/prebuilts/vndk/v28 -b 204f1bad00aaf480ba33233f7b8c2ddaa03155dd ./prebuilts/vndk/v28 --depth 1
+git clone https://android.googlesource.com/platform/prebuilts/vndk/v28 ./prebuilts/vndk/v28
+cd prebuilts/vndk/v28
+git reset --hard 204f1bad00aaf480ba33233f7b8c2ddaa03155dd
 
 apply "TrebleDroid"
-#apply "UniversalX"
+apply "UniversalX"

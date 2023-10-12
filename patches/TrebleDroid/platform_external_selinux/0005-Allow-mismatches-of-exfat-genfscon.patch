@@ -1,7 +1,7 @@
-From ca8ff1660b4dc76130d92515077a90ec92f564d2 Mon Sep 17 00:00:00 2001
+From e94428169c5713936c94721737c1150dec013e4c Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sun, 24 May 2020 17:22:22 +0200
-Subject: [PATCH 06/10] Allow mismatches of exfat genfscon
+Subject: [PATCH 5/9] Allow mismatches of exfat genfscon
 
 ---
  libsepol/cil/src/cil_post.c | 4 ++++

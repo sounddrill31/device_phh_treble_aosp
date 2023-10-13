@@ -30,6 +30,9 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 ELIXIR_BUILD_TYPE := OFFICIAL
 TARGET_BUILD_APERTURE_CAMERA := true
 
+# Certain devices need scudo
+PRODUCT_USE_SCUDO := true
+
 # GMS
 ifeq ($(WITH_GMS),true)
 GMS_MAKEFILE=gms_minimal.mk

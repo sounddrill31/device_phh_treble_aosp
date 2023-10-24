@@ -7,8 +7,8 @@ persist.sys.overlay.nightmode=true
 persist.sys.strictmode.disable=true
 persist.sys.phh.mainkeys=0
 
-fw.max_users=10
-persist.sys.max_profiles=10
+# fw.max_users=10
+# persist.sys.max_profiles=10
 ro.boot.realme.lockstate=0
 
 #Fixes fingerprint unlock delay

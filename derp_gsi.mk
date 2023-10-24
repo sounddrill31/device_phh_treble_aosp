@@ -6,7 +6,9 @@ $(call inherit-product, device/phh/treble/base.mk)
 # PRODUCT_USE_SCUDO := true
 
 # $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-$(call inherit-product, vendor/arrow/config/common.mk)
+# $(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
 
@@ -27,7 +29,7 @@ TARGET_SUPPORTS_GOOGLE_RECORDER := false
 TARGET_INCLUDE_STOCK_ACORE := false
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_FACE_UNLOCK_SUPPORTED := true
-ELIXIR_BUILD_TYPE := OFFICIAL
+# ELIXIR_BUILD_TYPE := OFFICIAL
 TARGET_BUILD_APERTURE_CAMERA := true
 
 # GMS
